@@ -1,0 +1,47 @@
+syntax = "proto3";
+
+import "15m.games/kiwi_tool/kiwi.proto";
+
+package pb;
+option go_package = "/pb";
+option csharp_namespace = "Pb";
+option (kiwi.svc) = {
+  name:"user",
+};
+
+message SignUpReq {
+  option (kiwi.role) = "guest";
+  option (kiwi.code) = 0;
+  string id = 1;
+  string password = 2;
+}
+
+message SignUpRes {
+  option (kiwi.code) = 1;
+  option (kiwi.fail) = {code: 1, key: "id_wrong", msg:"账号错误"};
+  option (kiwi.fail) = {code: 2, key: "pw_wrong", msg:"密码错误"};
+  option (kiwi.fail) = {code: 3, key: "id_exist", msg:"账号已存在"};
+  string token = 1;
+}
+
+message SignInReq {
+  option (kiwi.role) = "guest";
+  option (kiwi.code) = 2;
+  string id = 1;
+  string password = 2;
+}
+
+message SignInRes {
+  option (kiwi.code) = 3;
+  option (kiwi.fail) = {code:1, key:"wrong_id_or_password", msg:"账号或密码错误"};
+  string token = 1;
+}
+
+message SignOutReq {
+  option (kiwi.code) = 4;
+  option (kiwi.role) = "player";
+}
+
+message SignOutRes {
+  option (kiwi.code) = 5;
+}

@@ -1,0 +1,36 @@
+syntax = "proto3";
+
+import "15m.games/kiwi_tool/kiwi.proto";
+import "model/chat.proto";
+
+package pb;
+option go_package = "/pb";
+option csharp_namespace = "Pb";
+option (kiwi.svc) = {
+  name:"chat",
+  worker: {
+    mode: Share,
+    origin: Head,
+    key: "cid",
+  },
+  ntc:[{
+    svc:"player",
+    items:[{
+      code: "PlayerDisconnectNtc",
+      mode: Self,
+      origin: Head,
+      key: "sid",
+    }]
+  }]
+};
+
+message NewChanReq {
+  option (kiwi.code) = 100;
+  string id = 1;
+  EChan chanType = 2;
+  repeated string members = 3;
+}
+
+message NewChanRes {
+  option (kiwi.code) = 101;
+}

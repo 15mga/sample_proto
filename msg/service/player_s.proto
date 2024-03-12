@@ -1,0 +1,56 @@
+syntax = "proto3";
+
+import "15m.games/kiwi_tool/kiwi.proto";
+import "model/player.proto";
+
+package pb;
+option go_package = "/pb";
+option csharp_namespace = "Pb";
+option (kiwi.svc) = {
+  id: 4,
+  name:"player",
+  worker: {
+    mode: Active,
+    origin: Head,
+    key: "pid",
+  }
+};
+
+message PlayerListReq {
+  option (kiwi.role) = "admin";
+  option (kiwi.code) = 100;
+  int32 count = 1;
+  int32 page = 2;
+  string nameFilter = 3;
+  int32 heroFilter = 4;
+  repeated string projection = 5;
+}
+
+message PlayerListRes {
+  option (kiwi.code) = 101;
+  repeated Player list = 1;
+}
+
+message PlayerDisconnectReq {
+  option (kiwi.code) = 102;
+  string id = 1;
+  bytes cache = 2;
+}
+
+message PlayerDisconnectRes {
+  option (kiwi.code) = 103;
+}
+
+message PlayerDisconnectNtc {
+  option (kiwi.code) = 104;
+  bytes cache = 1;
+}
+
+message PlayerOfflineNtc {
+  option (kiwi.code) = 105;
+  string id = 1;
+}
+
+message PlayerRepeatNtc {
+  option (kiwi.code) = 106;
+}

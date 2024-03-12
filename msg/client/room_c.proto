@@ -1,0 +1,193 @@
+syntax = "proto3";
+
+import "15m.games/kiwi_tool/kiwi.proto";
+import "model/scene.proto";
+import "model/room.proto";
+
+package pb;
+option go_package = "/pb";
+option csharp_namespace = "Pb";
+option (kiwi.svc) = {
+  name:"room",
+};
+
+message RoomNewReq {
+  option (kiwi.role) = "player";
+  option (kiwi.role) = "admin";
+  option (kiwi.code) = 0;
+  option (kiwi.worker) = {
+    mode: Go,
+    origin: Pkt,
+  };
+  string name = 1;
+  ESceneMode mode = 2;
+  int32 sceneTplId = 3;
+  bool private = 4;
+  string password = 5;
+  int32 maxPlayers = 6;
+}
+
+message RoomNewRes {
+  option (kiwi.code) = 1;
+  option (kiwi.fail) = {code:1, key:"exist_name", msg:"房间名已存在"};
+  Room room = 1;
+}
+
+message RoomListReq {
+  option (kiwi.role) = "player";
+  option (kiwi.role) = "admin";
+  option (kiwi.code) = 2;
+  option (kiwi.worker) = {
+    mode: Go,
+    origin: Pkt,
+  };
+  string nameFilter = 1;
+  int32 modeFilter = 2;
+  int32 sceneTplFilter = 3;
+  int32 page = 5;
+  int32 count = 6;
+  repeated string projection = 7;
+}
+
+message RoomListRes {
+  option (kiwi.code) = 3;
+  repeated Room list = 1;
+}
+
+message RoomEntryReq {
+  option (kiwi.role) = "player";
+  option (kiwi.code) = 4;
+  string roomId = 1;
+}
+
+message RoomEntryRes {
+  option (kiwi.code) = 5;
+  option (kiwi.fail) = {code:1, key:"not_exist_room_id", msg:"房间不存在"};
+  option (kiwi.fail) = {code:2, key:"room_full", msg:"房间已满"};
+  option (kiwi.fail) = {code:3, key:"curr_status_can_not_entry", msg:"不能进入该房间"};
+  option (kiwi.fail) = {code:4, key:"had_entered", msg:"已进入房间，不能再进入"};
+  Room room = 1;
+}
+
+message RoomEntryPus {
+  option (kiwi.code) = 6;
+  option (kiwi.role) = "player";
+  string playerId = 1;
+  string nick = 2;
+  int32 hero = 3;
+  int32 seat = 4;
+  bool ready = 5;
+  bool disconnect = 6;
+}
+
+message RoomExitReq {
+  option (kiwi.code) = 7;
+  option (kiwi.role) = "player";
+}
+
+message RoomExitRes {
+  option (kiwi.code) = 8;
+  option (kiwi.fail) = {code:1, key:"not_exist_room_id", msg:"房间不存在"};
+  option (kiwi.fail) = {code:2, key:"not_entry_room", msg:"没有进房间"};
+  option (kiwi.fail) = {code:3, key:"can_not_exit_room", msg:"不能退出房间"};
+}
+
+message RoomExitPus {
+  option (kiwi.code) = 9;
+  option (kiwi.role) = "player";
+  string playerId = 1;
+}
+
+message RoomReadyReq {
+  option (kiwi.code) = 10;
+  option (kiwi.role) = "player";
+  bool isReady = 1;
+}
+
+message RoomReadyRes {
+  option (kiwi.code) = 11;
+  option (kiwi.fail) = {code:1, key:"not_exist_room_id", msg:"房间不存在"};
+  option (kiwi.fail) = {code:2, key:"not_entry_room", msg:"没有进房间"};
+}
+
+message RoomReadyPus {
+  option (kiwi.code) = 12;
+  option (kiwi.role) = "player";
+  string playerId = 1;
+  bool ready = 2;
+}
+
+message RoomStartReq {
+  option (kiwi.code) = 13;
+  option (kiwi.role) = "player";
+}
+
+message RoomStartRes {
+  option (kiwi.code) = 14;
+  option (kiwi.fail) = {code:1, key:"not_exist_room_or_not_owner", msg:"房间不存在或不是房主"};
+  option (kiwi.fail) = {code:2, key:"not_entry_room", msg:"没有进房间"};
+  option (kiwi.fail) = {code:3, key:"somebody_not_ready", msg:"有玩家没准备"};
+  option (kiwi.fail) = {code:4, key:"create_scene_fail", msg:"创建场景失败"};
+}
+
+message RoomStartPus {
+  option (kiwi.code) = 15;
+  option (kiwi.role) = "player";
+}
+
+message RoomGetReq {
+  option (kiwi.code) = 16;
+  option (kiwi.role) = "player";
+  string roomId = 1;
+}
+
+message RoomGetRes {
+  option (kiwi.code) = 17;
+  option (kiwi.fail) = {code:1, key:"not_exist_room_id", msg:"房间不存在"};
+  Room room = 1;
+}
+
+message RoomModifyReq {
+  option (kiwi.code) = 18;
+  option (kiwi.role) = "player";
+  string name = 1;
+  int32 sceneTplId = 2;
+  string password = 3;
+  int32 maxPlayers = 4;
+}
+
+message RoomModifyRes {
+  option (kiwi.code) = 19;
+  option (kiwi.fail) = {code:1, key:"not_entry_room", msg:"没有进房间"};
+  option (kiwi.fail) = {code:2, key:"not_owner", msg:"不是管理员"};
+}
+
+message RoomModifyPus {
+  option (kiwi.code) = 20;
+  option (kiwi.role) = "player";
+  Room room = 1;
+}
+
+message RoomReconnectReq {
+  option (kiwi.role) = "player";
+  option (kiwi.code) = 21;
+}
+
+message RoomReconnectRes {
+  option (kiwi.code) = 22;
+  option (kiwi.fail) = {code:1, key:"not_exist_room_id", msg:"房间不存在"};
+  option (kiwi.fail) = {code:2, key:"kick_out", msg:"已被提出"};
+  Room room = 1;
+}
+
+message RoomDisconnectPus {
+  option (kiwi.code) = 23;
+  option (kiwi.role) = "player";
+  string playerId = 1;
+}
+
+message RoomReconnectPus {
+  option (kiwi.code) = 24;
+  option (kiwi.role) = "player";
+  string playerId = 1;
+}

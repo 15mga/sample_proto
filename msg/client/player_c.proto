@@ -1,0 +1,89 @@
+syntax = "proto3";
+
+import "15m.games/kiwi_tool/kiwi.proto";
+import "model/player.proto";
+
+package pb;
+option go_package = "/pb";
+option csharp_namespace = "Pb";
+option (kiwi.svc) = {
+  name:"player",
+};
+
+// 客户端请求自己的信息
+message PlayerReq {
+  option (kiwi.code) = 0;
+  option (kiwi.role) = "player";
+  option (kiwi.role) = "admin";
+}
+
+message PlayerRes {
+  option (kiwi.code) = 1;
+  option (kiwi.fail) = {code: 1, key:"not_exist_id", msg:"不存在的账号"};
+  Player player = 1;
+}
+
+message PlayerManyReq {
+  option (kiwi.code) = 2;
+  option (kiwi.role) = "player";
+  option (kiwi.role) = "admin";
+  repeated string id = 1;
+  repeated string projection = 2;
+}
+
+message PlayerManyRes {
+  option (kiwi.code) = 3;
+  repeated Player Players = 1;
+}
+
+message PlayerNewReq {
+  option (kiwi.code) = 4;
+  option (kiwi.role) = "player";
+  string nick = 1;
+  int32 hero = 2;
+}
+
+message PlayerNewRes {
+  option (kiwi.code) = 5;
+  option (kiwi.fail) = {code:1, key:"exist_nick", msg:"已存在的昵称"};
+  Player player = 1;
+}
+
+message PlayerChangeNickReq {
+  option (kiwi.code) = 6;
+  option (kiwi.role) = "player";
+  option (kiwi.role) = "admin";
+  string nick = 1;
+}
+
+message PlayerChangeNickRes {
+  option (kiwi.code) = 7;
+}
+
+//请求其他玩家信息
+message PlayerIdReq {
+  option (kiwi.role) = "player";
+  option (kiwi.role) = "admin";
+  option (kiwi.code) = 8;
+  string id = 1;
+  repeated string projection = 2;
+}
+
+message PlayerIdRes {
+  option (kiwi.code) = 9;
+  option (kiwi.fail) = {code: 1, key:"not_exist_id", msg:"不存在的账号"};
+  Player Player = 1;
+}
+
+message PlayerReconnectReq {
+  option (kiwi.role) = "player";
+  option (kiwi.code) = 10;
+  string token = 1;
+}
+
+message PlayerReconnectRes {
+  option (kiwi.code) = 11;
+  option (kiwi.fail) = {code: 1, key:"not_exist", msg:"不存在token或玩家id"};
+  string roomId = 1;
+  string sceneId = 2;
+}

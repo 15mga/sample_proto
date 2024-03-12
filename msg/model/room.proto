@@ -1,0 +1,69 @@
+syntax = "proto3";
+
+import "15m.games/kiwi_tool/kiwi.proto";
+import "model/scene.proto";
+
+package pb;
+option go_package = "/pb";
+option csharp_namespace = "Pb";
+option (kiwi.svc) = {
+  name:"room",
+};
+
+enum RoomStatus {
+  Nil = 0;
+  Lobby = 1;
+  Loading = 2;
+  InProgress = 3;
+  InSettlement = 4;
+}
+
+message Room {
+  option (kiwi.schema) = true;
+  string id = 1;
+  string name = 2;
+  ESceneMode mode = 3;
+  int32 sceneTplId = 4;
+  string password = 5;
+  string ownerId = 6;
+  RoomStatus status = 7;
+  int32 maxPlayers = 8;
+  int32 currPlayers = 9;
+  int64 createTime = 10;
+  map<string, RoomPlayer> players = 11;
+  option (kiwi.idx) = {
+    unique: true,
+    fields:[
+      {
+        name: "name",
+        type: Text,
+      }
+    ]
+  };
+  option (kiwi.idx) = {
+    fields:[
+      {
+        name: "name",
+      },
+      {
+        name: "mode",
+      },
+      {
+        name: "scene_tpl_id",
+      },
+      {
+        name: "private",
+      },
+      {
+        name: "status",
+      }
+    ]
+  };
+}
+
+message RoomPlayer {
+  bool ready = 1;
+  bool disconnect = 2;
+  int64 enterTs = 3; //进入的时间戳
+  int32 seat = 4;
+}

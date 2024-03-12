@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+import "15m.games/kiwi_tool/kiwi.proto";
+
+package pb;
+option go_package = "/pb";
+option csharp_namespace = "Pb";
+option (kiwi.svc) = {
+  name:"team",
+};
+
+message Team {
+  option (kiwi.schema) = true;
+  string id = 1;
+  int32 mode = 2;
+  repeated TeamPlayer players = 3;
+}
+
+message TeamPlayer {
+  string playerId = 1;
+  bool online = 2;
+}

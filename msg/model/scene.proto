@@ -1,0 +1,113 @@
+syntax = "proto3";
+
+import "15m.games/kiwi_tool/kiwi.proto";
+import "model/vector.proto";
+
+package pb;
+option go_package = "/pb";
+option csharp_namespace = "Pb";
+option (kiwi.svc) = {
+  name:"scene",
+};
+
+enum ESceneMode {
+  PVE = 0; //刷怪
+  PVP = 1; //玩家对战
+  PVR = 2; //人机对战
+  War = 3; //战争
+}
+
+message Scene {
+  string id = 1;
+  int32 tplId = 2;
+  ESceneMode mode = 3;
+  repeated SceneAdmittedPlayer admitted = 4; //准入玩家
+}
+
+message SceneTemplate {
+  option (kiwi.schema) = true;
+  string id = 1;
+  string name = 2;
+  int32 width = 3;
+  int32 height = 4;
+}
+
+message ScenePawn {
+  ScenePawnEvt pawn = 1;
+  string playerGateAddr = 3;
+  int64 playerGateNodeId = 4;
+}
+
+message ScenePawnEvt {
+  string pawnId = 1;
+  Vector2 position = 2;
+  oneof pawnType {
+    ScenePlayer player = 3;
+    SceneMonster monster = 4;
+  }
+}
+
+message SceneAdmittedPlayer {
+  string id = 1;
+  bool entered = 2;
+}
+
+message ScenePlayer {
+  string nick = 1;
+  int32 hero = 2; //玩家英雄角色
+  string avatar = 3;
+  string teamId = 4;
+  int32 gender = 5;
+}
+
+message SceneMonster {
+  string tplId = 1;
+}
+
+message SceneMovement {
+  Vector2 direction = 1; //方向模
+  float moveSpeed = 2; //移动速度
+  sfixed64 timestamp = 3; //移动的时间戳,unix millSec
+}
+
+message SceneBehaviour {
+  sfixed64 timestamp = 1; //行为的时间戳,unix millSec
+  oneof behaviourType {
+    BehaviourIdle idle = 2;
+    BehaviourRun run = 3;
+    BehaviourTargetSkill pawnSkill = 4;
+    BehaviourAreaSkill areaSkill = 5;
+  }
+}
+
+message SceneTransformEvt {
+  string pawnId = 1;
+  repeated SceneMovementEvt movement = 2;
+}
+
+message SceneMovementEvt {
+  Vector2 position = 1; //移动速度
+  sfixed64 duration = 2; //移动的时间戳,unix millSec
+}
+
+message SceneBehaviourEvt {
+  string pawnId = 1;
+  SceneBehaviour behaviour = 2;
+}
+
+message BehaviourIdle {
+}
+
+message BehaviourRun {
+}
+
+
+message BehaviourTargetSkill {
+  int32 skillId = 1;
+  string targetId = 2;
+}
+
+message BehaviourAreaSkill {
+  int32 skillId = 1;
+  Vector2 position = 2;
+}

@@ -1,0 +1,68 @@
+syntax = "proto3";
+
+import "15m.games/kiwi_tool/kiwi.proto";
+
+package pb;
+option go_package = "/pb";
+option csharp_namespace = "Pb";
+option (kiwi.svc) = {
+  name:"chat",
+};
+
+enum EChan {
+  ChTeam = 0; //队伍
+  ChGroup = 1; //帮派组织
+  ChRoom = 2; //房间
+  ChScene = 3; //地图
+  ChWorld = 4; //世界
+  ChSystem = 5; //系统
+}
+
+message Chan {
+  option (kiwi.schema) = true;
+  string id = 1;
+  EChan chanType = 2;
+  repeated string members = 3;
+  option (kiwi.idx) = {
+    fields:[
+      {
+        name: "type",
+      }
+    ]
+  };
+}
+
+message Msg {
+  option (kiwi.schema) = true;
+  string id = 1;
+  string chId = 2; //chan id
+  EChan chanType = 3; //消息类型 1:文本 2:语音
+  bytes msg = 4;
+  string publisher = 5; //消息发送者
+  string publisherAvatar = 6; //消息发送者图标
+  string publisherId = 7; //消息发送者id
+  option (kiwi.idx) = {
+    fields:[
+      {
+        name: "chan_id",
+      }
+    ]
+  };
+  option (kiwi.idx) = {
+    fields:[
+      {
+        name: "player_id",
+      }
+    ]
+  };
+  option (kiwi.idx) = {
+    fields:[
+      {
+        name: "chan_id",
+      },
+      {
+        name: "player_id",
+      }
+    ]
+  };
+}

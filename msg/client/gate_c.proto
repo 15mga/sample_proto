@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+import "15m.games/kiwi_tool/kiwi.proto";
+
+package pb;
+option go_package = "/pb";
+option csharp_namespace = "Pb";
+option (kiwi.svc) = {
+  name:"gate",
+};
+
+message HeartbeatReq {
+  option (kiwi.code) = 0;
+  option (kiwi.role) = "player";
+  option (kiwi.role) = "admin";
+  int64 reqTs = 1;
+}
+
+message HeartbeatRes {
+  option (kiwi.code) = 1;
+  int64 reqTs = 1;
+  int64 resTs = 2;
+}

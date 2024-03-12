@@ -1,0 +1,32 @@
+syntax = "proto3";
+
+import "15m.games/kiwi_tool/kiwi.proto";
+
+package pb;
+option go_package = "/pb";
+option csharp_namespace = "Pb";
+option (kiwi.svc) = {
+  name:"user",
+  id:3,
+  worker: {
+    mode: Go,
+    origin: Head,
+    key: "addr",
+  }
+};
+
+message User {
+  option (kiwi.schema) = true;
+  string id = 1;
+  string password = 2;
+  int64 roleMask = 3;
+  bool ban = 4;
+  option (kiwi.idx) = {
+    unique: true,
+    fields:[
+      {
+        name: "ban",
+      }
+    ]
+  };
+}

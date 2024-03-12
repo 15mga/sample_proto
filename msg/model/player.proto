@@ -1,0 +1,107 @@
+syntax = "proto3";
+
+import "15m.games/kiwi_tool/kiwi.proto";
+
+package pb;
+option go_package = "/pb";
+option csharp_namespace = "Pb";
+option (kiwi.svc) = {
+  name:"player",
+};
+
+enum PlayerStatus {
+  Offline = 0;
+  Online = 1;
+  Disconnect = 2;
+}
+
+message Player {
+  option (kiwi.schema) = true;
+  string id = 1; //玩家id
+  string userId = 2; //用户id
+  string nick = 3; //昵称
+  int32 hero = 4; //玩家英雄角色
+  string avatar = 5;
+  string teamId = 6;
+  int32 gender = 7;
+  PlayerStatus status = 8; //玩家状态
+  int64 lastSignIn = 9; //最后登录时间
+  string lastAddr = 10; //最后登录的地址，重复登录用
+  sfixed64 lastGateNode = 11; //最后连接的网关节点，重复登录用
+  option (kiwi.idx) = {
+    unique: true,
+    fields:[
+      {
+        name: "nick",
+        type: Text,
+      }
+    ]
+  };
+  option (kiwi.idx) = {
+    fields:[
+      {
+        name: "hero",
+      }
+    ]
+  };
+  option (kiwi.idx) = {
+    fields:[
+      {
+        name: "status",
+      }
+    ]
+  };
+  option (kiwi.idx) = {
+    fields:[
+      {
+        name: "last_sign_in",
+      }
+    ]
+  };
+  option (kiwi.idx) = {
+    fields:[
+      {
+        name: "last_addr",
+      }
+    ]
+  };
+  option (kiwi.idx) = {
+    fields:[
+      {
+        name: "team_id",
+      }
+    ]
+  };
+  option (kiwi.idx) = {
+    fields:[
+      {
+        name: "scene_id",
+      }
+    ]
+  };
+}
+
+//重连用，可以挪到redis
+message Reconnect {
+  option (kiwi.schema) = true;
+  string id = 1; //player id
+  string token = 2; //账号服给的token
+  string timestamp = 3; //断线的时间戳,必须使用MongoDB的格式
+  bytes head = 4; //gate的Head
+  bytes cache = 5; //gate的Cache
+  option (kiwi.idx) = {
+    fields:[
+      {
+        name: "token",
+      }
+    ],
+  };
+  option (kiwi.idx) = {
+    fields:[
+      {
+        name: "timestamp",
+      }
+    ],
+    ttl: 300, //5分钟后过期，单位秒，注意和下线出发时间一致
+  };
+}

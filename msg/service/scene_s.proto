@@ -1,0 +1,65 @@
+syntax = "proto3";
+
+import "15m.games/kiwi_tool/kiwi.proto";
+import "model/scene.proto";
+
+package pb;
+option go_package = "/pb";
+option csharp_namespace = "Pb";
+option (kiwi.svc) = {
+  id:7,
+  name:"scene",
+  worker: {
+    mode: Share,
+    origin: Service,
+    key: "sid",
+  }
+  ntc:[{
+    svc:"player",
+    items:[{
+      code: "PlayerDisconnectNtc",
+        mode: Self,
+        origin: Head,
+        key: "sid",
+      }]
+  }]
+};
+
+message NewSceneReq {
+  option (kiwi.code) = 100;
+  Scene scene = 1;
+}
+
+message NewSceneRes {
+  option (kiwi.code) = 101;
+}
+
+message DisposeSceneReq {
+  option (kiwi.code) = 102;
+  string sceneId = 1;
+}
+
+message DisposeSceneRes {
+  option (kiwi.code) = 103;
+}
+
+message SceneGetReq {
+  option (kiwi.code) = 104;
+  string id = 1;
+}
+
+message SceneGetRes {
+  option (kiwi.code) = 105;
+  option (kiwi.fail) = {code:1, key:"not_exist_scene", msg:"场景不存在"};
+  Scene scene = 1;
+}
+
+message SceneHasReq {
+  option (kiwi.code) = 106;
+  string id = 1;
+}
+
+message SceneHasRes {
+  option (kiwi.code) = 107;
+  bool exist = 1;
+}

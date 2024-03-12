@@ -1,0 +1,80 @@
+syntax = "proto3";
+
+import "15m.games/kiwi_tool/kiwi.proto";
+import "model/scene.proto";
+import "model/vector.proto";
+
+package pb;
+option go_package = "/pb";
+option csharp_namespace = "Pb";
+option (kiwi.svc) = {
+  name:"scene",
+};
+
+message SceneEntryReq {
+  option (kiwi.code) = 0;
+  option (kiwi.role) = "player";
+}
+
+message SceneEntryRes {
+  option (kiwi.code) = 1;
+  option (kiwi.fail) = {code: 1, key:"not_exist_scene", msg:"不存在场景"};
+  option (kiwi.fail) = {code: 2, key:"no_entry", msg:"不允许进入"};
+  option (kiwi.fail) = {code: 3, key:"entryed", msg:"不允许进入"};
+  Vector2 position = 1;
+}
+
+message SceneMovementReq {
+  option (kiwi.code) = 2;
+  option (kiwi.role) = "player";
+  SceneMovement movement = 1;
+}
+
+message SceneMovementRes {
+  option (kiwi.code) = 3;
+  option (kiwi.fail) = {code:1, key:"not_entry", msg:"没有进入场景"};
+}
+
+message SceneBehaviourReq {
+  option (kiwi.code) = 4;
+  SceneBehaviour behaviour = 1;
+}
+
+message SceneBehaviourRes {
+  option (kiwi.code) = 5;
+  option (kiwi.fail) = {code:1, key:"not_entry", msg:"没有进入场景"};
+  option (kiwi.fail) = {code:2, key:"no_skill", msg:"不能使用该技能"};
+  option (kiwi.fail) = {code:3, key:"no_cd", msg:"没冷却"};
+  option (kiwi.fail) = {code:4, key:"no_target", msg:"不能选择该目标"};
+}
+
+message SceneEventPus {
+  option (kiwi.code) = 6;
+  option (kiwi.role) = "player";
+  repeated ScenePawnEvt visible = 1;
+  repeated string invisible = 2;
+  repeated SceneTransformEvt transform = 3;
+  repeated SceneBehaviourEvt behaviour = 4;
+}
+
+message SceneRobotAddReq {
+  option (kiwi.code) = 7;
+  option (kiwi.role) = "player";
+  int32 count = 1;
+}
+
+message SceneRobotAddRes {
+  option (kiwi.code) = 8;
+  option (kiwi.fail) = {code:1, key:"not_entry", msg:"没有进入场景"};
+  option (kiwi.fail) = {code:2, key:"too_many_robot", msg:"机器人已达上限"};
+}
+
+message SceneRobotClearReq {
+  option (kiwi.code) = 9;
+  option (kiwi.role) = "player";
+}
+
+message SceneRobotClearRes {
+  option (kiwi.code) = 10;
+  option (kiwi.fail) = {code:1, key:"not_entry", msg:"没有进入场景"};
+}

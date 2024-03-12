@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+import "15m.games/kiwi_tool/kiwi.proto";
+import "model/team.proto";
+
+package pb;
+option go_package = "/pb";
+option csharp_namespace = "Pb";
+option (kiwi.svc) = {
+  name:"team",
+};
+
+message NewTeamReq {
+  option (kiwi.code) = 0;
+  option (kiwi.role) = "player";
+  int32 mode = 1;
+  repeated string players = 3;
+}
+
+message NewTeamRes {
+  option (kiwi.code) = 1;
+  Team team = 1;
+}

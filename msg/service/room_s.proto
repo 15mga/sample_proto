@@ -1,0 +1,33 @@
+syntax = "proto3";
+
+import "15m.games/kiwi_tool/kiwi.proto";
+
+package pb;
+option go_package = "/pb";
+option csharp_namespace = "Pb";
+option (kiwi.svc) = {
+  id:5,
+  name:"room",
+  worker: {
+    mode: Active,
+    origin: Head,
+    key: "rid",
+  },
+  ntc:[{
+    svc:"player",
+    items:[{
+      code: "PlayerDisconnectNtc",
+      mode: Active,
+      origin: Head,
+      key: "rid",
+    }]
+  },{
+    svc:"player",
+    items:[{
+      code: "PlayerOfflineNtc",
+      mode: Active,
+      origin: Head,
+      key: "rid",
+    }]
+  }]
+};

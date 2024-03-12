@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+import "15m.games/kiwi_tool/kiwi.proto";
+
+package pb;
+option go_package = "/pb";
+option csharp_namespace = "Pb";
+option (kiwi.svc) = {
+  name:"user",
+};
+
+message SignUpNtc {
+  option (kiwi.code) = 100;
+  string id = 1;
+}
+
+message SignInNtc {
+  option (kiwi.code) = 101;
+  string id = 1;
+}
+
+message SignOutNtc {
+  option (kiwi.code) = 102;
+  string id = 1;
+}
