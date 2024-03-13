@@ -8,6 +8,7 @@ option go_package = "/pb";
 option csharp_namespace = "Pb";
 option (kiwi.svc) = {
   name:"chat",
+  id: 9,
   worker: {
     mode: Share,
     origin: Head,
