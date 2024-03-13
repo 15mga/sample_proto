@@ -11,8 +11,6 @@ namespace Pb
 		public static readonly Dictionary<Type, ushort> MsgTypeToCode = new()
 		{
 			{typeof(HeartbeatReq), 2000},
-			{typeof(GateCloseIdPus), 2112},
-			{typeof(GateCloseAddrPus), 2113},
 			{typeof(SignUpReq), 3000},
 			{typeof(SignInReq), 3002},
 			{typeof(SignOutReq), 3004},
@@ -51,8 +49,6 @@ namespace Pb
 		public static readonly Dictionary<ushort, Func<byte[], IMessage>> CodeToMsg = new()
 		{
 			{2001, HeartbeatRes.Parser.ParseFrom},
-			{2112, GateCloseIdPus.Parser.ParseFrom},
-			{2113, GateCloseAddrPus.Parser.ParseFrom},
 			{3001, SignUpRes.Parser.ParseFrom},
 			{3003, SignInRes.Parser.ParseFrom},
 			{3005, SignOutRes.Parser.ParseFrom},

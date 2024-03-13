@@ -74,87 +74,95 @@ message GateSendToAllRes {
   option (kiwi.code) = 111;
 }
 
-message GateCloseIdPus {
+message GateCloseIdReq {
   option (kiwi.code) = 112;
   string id = 1;
 }
 
-message GateCloseAddrPus {
+message GateCloseIdRes {
   option (kiwi.code) = 113;
+}
+
+message GateCloseAddrReq {
+  option (kiwi.code) = 114;
   string addr = 1;
 }
 
+message GateCloseAddrRes {
+  option (kiwi.code) = 115;
+}
+
 message GateUpdateReq {
-  option (kiwi.code) = 114;
+  option (kiwi.code) = 116;
   string id = 1;
   bytes head = 2;
   bytes cache = 3;
 }
 
 message GateUpdateRes {
-  option (kiwi.code) = 115;
+  option (kiwi.code) = 117;
   option (kiwi.fail) = {code:1, key:"not_exist_id", msg:"id不存在"};
 }
 
 message GateAddrUpdateReq {
-  option (kiwi.code) = 116;
+  option (kiwi.code) = 118;
   string addr = 1;
   bytes head = 2;
   bytes cache = 3;
 }
 
 message GateAddrUpdateRes {
-  option (kiwi.code) = 117;
+  option (kiwi.code) = 119;
   option (kiwi.fail) = {code:1, key:"not_exist_addr", msg:"地址不存在"};
 }
 
 message GateRemoveReq {
-  option (kiwi.code) = 118;
+  option (kiwi.code) = 120;
   string id = 1;
   repeated string head = 2;
   repeated string cache = 3;
 }
 
 message GateRemoveRes {
-  option (kiwi.code) = 119;
+  option (kiwi.code) = 121;
   option (kiwi.fail) = {code:1, key:"not_exist_id", msg:"id不存在"};
 }
 
 message GateAddrRemoveReq {
-  option (kiwi.code) = 120;
+  option (kiwi.code) = 122;
   string addr = 1;
   repeated string head = 2;
   repeated string cache = 3;
 }
 
 message GateAddrRemoveRes {
-  option (kiwi.code) = 121;
+  option (kiwi.code) = 123;
   option (kiwi.fail) = {code:1, key:"not_exist_addr", msg:"地址不存在"};
 }
 
 message GateGetReq {
-  option (kiwi.code) = 122;
+  option (kiwi.code) = 124;
   string id = 1;
   bool head = 2;
   bool cache = 3;
 }
 
 message GateGetRes {
-  option (kiwi.code) = 123;
+  option (kiwi.code) = 125;
   option (kiwi.fail) = {code:1, key:"not_exist_id", msg:"id不存在"};
   bytes head = 1;
   bytes cache = 2;
 }
 
 message GateAddrGetReq {
-  option (kiwi.code) = 124;
+  option (kiwi.code) = 126;
   string addr = 1;
   bool head = 2;
   bool cache = 3;
 }
 
 message GateAddrGetRes {
-  option (kiwi.code) = 125;
+  option (kiwi.code) = 127;
   option (kiwi.fail) = {code:1, key:"not_exist_addr", msg:"地址不存在"};
   bytes head = 1;
   bytes cache = 2;
