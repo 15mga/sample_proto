@@ -66,7 +66,6 @@ message SceneRobotAddReq {
 message SceneRobotAddRes {
   option (kiwi.code) = 8;
   option (kiwi.fail) = {code:1, key:"not_entry", msg:"没有进入场景"};
-  option (kiwi.fail) = {code:2, key:"too_many_robot", msg:"机器人已达上限"};
   int32 currCount = 1;
 }
 
