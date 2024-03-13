@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-import "15m.games/kiwi_tool/kiwi.proto";
+import "github.com/15mga/kiwi_tool/kiwi.proto";
 import "model/chat.proto";
 
 package pb;

@@ -24,33 +24,34 @@ namespace Pb {
     static SceneCReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChRjbGllbnQvc2NlbmVfYy5wcm90bxICcGIaGjE1bS5nYW1lcy90b29sL3Zl",
-            "cnNlLnByb3RvGhFtb2RlbC9zY2VuZS5wcm90bxoSbW9kZWwvdmVjdG9yLnBy",
-            "b3RvIh8KDVNjZW5lRW50cnlSZXE6DuDjSQDq40kGcGxheWVyIn0KDVNjZW5l",
-            "RW50cnlSZXMSHQoIcG9zaXRpb24YASABKAsyCy5wYi5WZWN0b3IyOk3g40kB",
-            "8uNJJAgBEg9ub3RfZXhpc3Rfc2NlbmUaD+S4jeWtmOWcqOWcuuaZr/LjSR0I",
-            "AhIIbm9fZW50cnkaD+S4jeWFgeiuuOi/m+WFpSJHChBTY2VuZU1vdmVtZW50",
-            "UmVxEiMKCG1vdmVtZW50GAEgASgLMhEucGIuU2NlbmVNb3ZlbWVudDoO4ONJ",
-            "AurjSQZwbGF5ZXIiPQoQU2NlbmVNb3ZlbWVudFJlczop4ONJA/LjSSEIARIJ",
-            "bm90X2VudHJ5GhLmsqHmnInov5vlhaXlnLrmma8iQAoRU2NlbmVCZWhhdmlv",
-            "dXJSZXESJQoJYmVoYXZpb3VyGAEgASgLMhIucGIuU2NlbmVCZWhhdmlvdXI6",
-            "BODjSQQipgEKEVNjZW5lQmVoYXZpb3VyUmVzOpAB4ONJBfLjSSEIARIJbm90",
-            "X2VudHJ5GhLmsqHmnInov5vlhaXlnLrmma/y40kjCAISCG5vX3NraWxsGhXk",
-            "uI3og73kvb/nlKjor6XmioDog73y40kUCAMSBW5vX2NkGgnmsqHlhrfljbTy",
-            "40kkCAQSCW5vX3RhcmdldBoV5LiN6IO96YCJ5oup6K+l55uu5qCHIqkBCg1T",
-            "Y2VuZUV2ZW50TnRjEiEKB3Zpc2libGUYASADKAsyEC5wYi5TY2VuZVBhd25F",
-            "dnQSEQoJaW52aXNpYmxlGAIgAygJEigKCXRyYW5zZm9ybRgDIAMoCzIVLnBi",
-            "LlNjZW5lVHJhbnNmb3JtRXZ0EigKCWJlaGF2aW91chgEIAMoCzIVLnBiLlNj",
-            "ZW5lQmVoYXZpb3VyRXZ0Og7g40kG6uNJBnBsYXllciIxChBTY2VuZVJvYm90",
-            "QWRkUmVxEg0KBWNvdW50GAEgASgFOg7g40kH6uNJBnBsYXllciJqChBTY2Vu",
-            "ZVJvYm90QWRkUmVzOlbg40kI8uNJIQgBEglub3RfZW50cnkaEuayoeaciei/",
-            "m+WFpeWcuuaZr/LjSSkIAhIOdG9vX21hbnlfcm9ib3QaFeacuuWZqOS6uuW3",
-            "sui+vuS4iumZkCIkChJTY2VuZVJvYm90Q2xlYXJSZXE6DuDjSQnq40kGcGxh",
-            "eWVyIj8KElNjZW5lUm9ib3RDbGVhclJlczop4ONJCvLjSSEIARIJbm90X2Vu",
-            "dHJ5GhLmsqHmnInov5vlhaXlnLrmma9CF1oDL3BiqgICUGLK3UkJCAcSBXNj",
-            "ZW5lYgZwcm90bzM="));
+            "ChRjbGllbnQvc2NlbmVfYy5wcm90bxICcGIaJWdpdGh1Yi5jb20vMTVtZ2Ev",
+            "a2l3aV90b29sL2tpd2kucHJvdG8aEW1vZGVsL3NjZW5lLnByb3RvGhJtb2Rl",
+            "bC92ZWN0b3IucHJvdG8iHwoNU2NlbmVFbnRyeVJlcToO4ONJAOrjSQZwbGF5",
+            "ZXIinQEKDVNjZW5lRW50cnlSZXMSHQoIcG9zaXRpb24YASABKAsyCy5wYi5W",
+            "ZWN0b3IyOm3g40kB8uNJJAgBEg9ub3RfZXhpc3Rfc2NlbmUaD+S4jeWtmOWc",
+            "qOWcuuaZr/LjSR0IAhIIbm9fZW50cnkaD+S4jeWFgeiuuOi/m+WFpfLjSRwI",
+            "AxIHZW50cnllZBoP5LiN5YWB6K646L+b5YWlIkcKEFNjZW5lTW92ZW1lbnRS",
+            "ZXESIwoIbW92ZW1lbnQYASABKAsyES5wYi5TY2VuZU1vdmVtZW50Og7g40kC",
+            "6uNJBnBsYXllciI9ChBTY2VuZU1vdmVtZW50UmVzOing40kD8uNJIQgBEglu",
+            "b3RfZW50cnkaEuayoeaciei/m+WFpeWcuuaZryJAChFTY2VuZUJlaGF2aW91",
+            "clJlcRIlCgliZWhhdmlvdXIYASABKAsyEi5wYi5TY2VuZUJlaGF2aW91cjoE",
+            "4ONJBCKmAQoRU2NlbmVCZWhhdmlvdXJSZXM6kAHg40kF8uNJIQgBEglub3Rf",
+            "ZW50cnkaEuayoeaciei/m+WFpeWcuuaZr/LjSSMIAhIIbm9fc2tpbGwaFeS4",
+            "jeiDveS9v+eUqOivpeaKgOiDvfLjSRQIAxIFbm9fY2QaCeayoeWGt+WNtPLj",
+            "SSQIBBIJbm9fdGFyZ2V0GhXkuI3og73pgInmi6nor6Xnm67moIciqQEKDVNj",
+            "ZW5lRXZlbnRQdXMSIQoHdmlzaWJsZRgBIAMoCzIQLnBiLlNjZW5lUGF3bkV2",
+            "dBIRCglpbnZpc2libGUYAiADKAkSKAoJdHJhbnNmb3JtGAMgAygLMhUucGIu",
+            "U2NlbmVUcmFuc2Zvcm1FdnQSKAoJYmVoYXZpb3VyGAQgAygLMhUucGIuU2Nl",
+            "bmVCZWhhdmlvdXJFdnQ6DuDjSQbq40kGcGxheWVyIjEKEFNjZW5lUm9ib3RB",
+            "ZGRSZXESDQoFY291bnQYASABKAU6DuDjSQfq40kGcGxheWVyIn0KEFNjZW5l",
+            "Um9ib3RBZGRSZXMSEQoJY3VyckNvdW50GAEgASgFOlbg40kI8uNJIQgBEglu",
+            "b3RfZW50cnkaEuayoeaciei/m+WFpeWcuuaZr/LjSSkIAhIOdG9vX21hbnlf",
+            "cm9ib3QaFeacuuWZqOS6uuW3sui+vuS4iumZkCIkChJTY2VuZVJvYm90Q2xl",
+            "YXJSZXE6DuDjSQnq40kGcGxheWVyIj8KElNjZW5lUm9ib3RDbGVhclJlczop",
+            "4ONJCvLjSSEIARIJbm90X2VudHJ5GhLmsqHmnInov5vlhaXlnLrmma9CFVoD",
+            "L3BiqgICUGLK3UkHEgVzY2VuZWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Et.VerseReflection.Descriptor, global::Pb.SceneReflection.Descriptor, global::Pb.VectorReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Kiwi.KiwiReflection.Descriptor, global::Pb.SceneReflection.Descriptor, global::Pb.VectorReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Pb.SceneEntryReq), global::Pb.SceneEntryReq.Parser, null, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Pb.SceneEntryRes), global::Pb.SceneEntryRes.Parser, new[]{ "Position" }, null, null, null, null),
@@ -58,9 +59,9 @@ namespace Pb {
             new pbr::GeneratedClrTypeInfo(typeof(global::Pb.SceneMovementRes), global::Pb.SceneMovementRes.Parser, null, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Pb.SceneBehaviourReq), global::Pb.SceneBehaviourReq.Parser, new[]{ "Behaviour" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Pb.SceneBehaviourRes), global::Pb.SceneBehaviourRes.Parser, null, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Pb.SceneEventNtc), global::Pb.SceneEventNtc.Parser, new[]{ "Visible", "Invisible", "Transform", "Behaviour" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Pb.SceneEventPus), global::Pb.SceneEventPus.Parser, new[]{ "Visible", "Invisible", "Transform", "Behaviour" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Pb.SceneRobotAddReq), global::Pb.SceneRobotAddReq.Parser, new[]{ "Count" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Pb.SceneRobotAddRes), global::Pb.SceneRobotAddRes.Parser, null, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Pb.SceneRobotAddRes), global::Pb.SceneRobotAddRes.Parser, new[]{ "CurrCount" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Pb.SceneRobotClearReq), global::Pb.SceneRobotClearReq.Parser, null, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Pb.SceneRobotClearRes), global::Pb.SceneRobotClearRes.Parser, null, null, null, null, null)
           }));
@@ -1119,16 +1120,16 @@ namespace Pb {
 
   }
 
-  public sealed partial class SceneEventNtc : pb::IMessage<SceneEventNtc>
+  public sealed partial class SceneEventPus : pb::IMessage<SceneEventPus>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
   #endif
   {
-    private static readonly pb::MessageParser<SceneEventNtc> _parser = new pb::MessageParser<SceneEventNtc>(() => new SceneEventNtc());
+    private static readonly pb::MessageParser<SceneEventPus> _parser = new pb::MessageParser<SceneEventPus>(() => new SceneEventPus());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pb::MessageParser<SceneEventNtc> Parser { get { return _parser; } }
+    public static pb::MessageParser<SceneEventPus> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1144,7 +1145,7 @@ namespace Pb {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public SceneEventNtc() {
+    public SceneEventPus() {
       OnConstruction();
     }
 
@@ -1152,7 +1153,7 @@ namespace Pb {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public SceneEventNtc(SceneEventNtc other) : this() {
+    public SceneEventPus(SceneEventPus other) : this() {
       visible_ = other.visible_.Clone();
       invisible_ = other.invisible_.Clone();
       transform_ = other.transform_.Clone();
@@ -1162,8 +1163,8 @@ namespace Pb {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public SceneEventNtc Clone() {
-      return new SceneEventNtc(this);
+    public SceneEventPus Clone() {
+      return new SceneEventPus(this);
     }
 
     /// <summary>Field number for the "visible" field.</summary>
@@ -1213,12 +1214,12 @@ namespace Pb {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
-      return Equals(other as SceneEventNtc);
+      return Equals(other as SceneEventPus);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool Equals(SceneEventNtc other) {
+    public bool Equals(SceneEventPus other) {
       if (ReferenceEquals(other, null)) {
         return false;
       }
@@ -1298,7 +1299,7 @@ namespace Pb {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(SceneEventNtc other) {
+    public void MergeFrom(SceneEventPus other) {
       if (other == null) {
         return;
       }
@@ -1598,6 +1599,7 @@ namespace Pb {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SceneRobotAddRes(SceneRobotAddRes other) : this() {
+      currCount_ = other.currCount_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1605,6 +1607,18 @@ namespace Pb {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SceneRobotAddRes Clone() {
       return new SceneRobotAddRes(this);
+    }
+
+    /// <summary>Field number for the "currCount" field.</summary>
+    public const int CurrCountFieldNumber = 1;
+    private int currCount_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CurrCount {
+      get { return currCount_; }
+      set {
+        currCount_ = value;
+      }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1622,6 +1636,7 @@ namespace Pb {
       if (ReferenceEquals(other, this)) {
         return true;
       }
+      if (CurrCount != other.CurrCount) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1629,6 +1644,7 @@ namespace Pb {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
+      if (CurrCount != 0) hash ^= CurrCount.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1647,6 +1663,10 @@ namespace Pb {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
+      if (CurrCount != 0) {
+        output.WriteRawTag(8);
+        output.WriteInt32(CurrCount);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1657,6 +1677,10 @@ namespace Pb {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (CurrCount != 0) {
+        output.WriteRawTag(8);
+        output.WriteInt32(CurrCount);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1667,6 +1691,9 @@ namespace Pb {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
+      if (CurrCount != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(CurrCount);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -1678,6 +1705,9 @@ namespace Pb {
     public void MergeFrom(SceneRobotAddRes other) {
       if (other == null) {
         return;
+      }
+      if (other.CurrCount != 0) {
+        CurrCount = other.CurrCount;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1694,6 +1724,10 @@ namespace Pb {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
+          case 8: {
+            CurrCount = input.ReadInt32();
+            break;
+          }
         }
       }
     #endif
@@ -1709,6 +1743,10 @@ namespace Pb {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
+          case 8: {
+            CurrCount = input.ReadInt32();
+            break;
+          }
         }
       }
     }

@@ -24,13 +24,13 @@ namespace Pb {
     static GateCReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChNjbGllbnQvZ2F0ZV9jLnByb3RvEgJwYhoaMTVtLmdhbWVzL3Rvb2wvdmVy",
-            "c2UucHJvdG8iNgoMSGVhcnRiZWF0UmVxEg0KBXJlcVRzGAEgASgDOhfg40kA",
-            "6uNJBnBsYXllcurjSQVhZG1pbiIyCgxIZWFydGJlYXRSZXMSDQoFcmVxVHMY",
-            "ASABKAMSDQoFcmVzVHMYAiABKAM6BODjSQFCFFoDL3BiqgICUGLK3UkGEgRn",
-            "YXRlYgZwcm90bzM="));
+            "ChNjbGllbnQvZ2F0ZV9jLnByb3RvEgJwYholZ2l0aHViLmNvbS8xNW1nYS9r",
+            "aXdpX3Rvb2wva2l3aS5wcm90byI2CgxIZWFydGJlYXRSZXESDQoFcmVxVHMY",
+            "ASABKAM6F+DjSQDq40kGcGxheWVy6uNJBWFkbWluIjIKDEhlYXJ0YmVhdFJl",
+            "cxINCgVyZXFUcxgBIAEoAxINCgVyZXNUcxgCIAEoAzoE4ONJAUIUWgMvcGKq",
+            "AgJQYsrdSQYSBGdhdGViBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Et.VerseReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Kiwi.KiwiReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Pb.HeartbeatReq), global::Pb.HeartbeatReq.Parser, new[]{ "ReqTs" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Pb.HeartbeatRes), global::Pb.HeartbeatRes.Parser, new[]{ "ReqTs", "ResTs" }, null, null, null, null)

@@ -24,13 +24,13 @@ namespace Pb {
     static TeamCReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChNjbGllbnQvdGVhbV9jLnByb3RvEgJwYhoaMTVtLmdhbWVzL3Rvb2wvdmVy",
-            "c2UucHJvdG8aEG1vZGVsL3RlYW0ucHJvdG8iOwoKTmV3VGVhbVJlcRIMCgRt",
-            "b2RlGAEgASgFEg8KB3BsYXllcnMYAyADKAk6DuDjSQDq40kGcGxheWVyIioK",
-            "Ck5ld1RlYW1SZXMSFgoEdGVhbRgBIAEoCzIILnBiLlRlYW06BODjSQFCFloD",
-            "L3BiqgICUGLK3UkICAgSBHRlYW1iBnByb3RvMw=="));
+            "ChNjbGllbnQvdGVhbV9jLnByb3RvEgJwYholZ2l0aHViLmNvbS8xNW1nYS9r",
+            "aXdpX3Rvb2wva2l3aS5wcm90bxoQbW9kZWwvdGVhbS5wcm90byI7CgpOZXdU",
+            "ZWFtUmVxEgwKBG1vZGUYASABKAUSDwoHcGxheWVycxgDIAMoCToO4ONJAOrj",
+            "SQZwbGF5ZXIiKgoKTmV3VGVhbVJlcxIWCgR0ZWFtGAEgASgLMggucGIuVGVh",
+            "bToE4ONJAUIUWgMvcGKqAgJQYsrdSQYSBHRlYW1iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Et.VerseReflection.Descriptor, global::Pb.TeamReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Kiwi.KiwiReflection.Descriptor, global::Pb.TeamReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Pb.NewTeamReq), global::Pb.NewTeamReq.Parser, new[]{ "Mode", "Players" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Pb.NewTeamRes), global::Pb.NewTeamRes.Parser, new[]{ "Team" }, null, null, null, null)

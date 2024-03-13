@@ -24,19 +24,19 @@ namespace Pb {
     static ChatReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChBtb2RlbC9jaGF0LnByb3RvEgJwYhoaMTVtLmdhbWVzL3Rvb2wvdmVyc2Uu",
-            "cHJvdG8iUgoEQ2hhbhIKCgJpZBgBIAEoCRIbCghjaGFuVHlwZRgCIAEoDjIJ",
-            "LnBiLkVDaGFuEg8KB21lbWJlcnMYAyADKAk6EPjjSQGC5EkICgYKBHR5cGUi",
-            "zAEKA01zZxIKCgJpZBgBIAEoCRIMCgRjaElkGAIgASgJEhsKCGNoYW5UeXBl",
-            "GAMgASgOMgkucGIuRUNoYW4SCwoDbXNnGAQgASgMEhEKCXB1Ymxpc2hlchgF",
-            "IAEoCRIXCg9wdWJsaXNoZXJBdmF0YXIYBiABKAkSEwoLcHVibGlzaGVySWQY",
-            "ByABKAk6QPjjSQGC5EkLCgkKB2NoYW5faWSC5EkNCgsKCXBsYXllcl9pZILk",
-            "SRgKCQoHY2hhbl9pZAoLCglwbGF5ZXJfaWQqVAoFRUNoYW4SCgoGQ2hUZWFt",
-            "EAASCwoHQ2hHcm91cBABEgoKBkNoUm9vbRACEgsKB0NoU2NlbmUQAxILCgdD",
-            "aFdvcmxkEAQSDAoIQ2hTeXN0ZW0QBUIhWgMvcGKqAgJQYsrdSRMIBhIEY2hh",
-            "dBoJCAIQARoDY2lkYgZwcm90bzM="));
+            "ChBtb2RlbC9jaGF0LnByb3RvEgJwYholZ2l0aHViLmNvbS8xNW1nYS9raXdp",
+            "X3Rvb2wva2l3aS5wcm90byJSCgRDaGFuEgoKAmlkGAEgASgJEhsKCGNoYW5U",
+            "eXBlGAIgASgOMgkucGIuRUNoYW4SDwoHbWVtYmVycxgDIAMoCToQ+ONJAYLk",
+            "SQgKBgoEdHlwZSLMAQoDTXNnEgoKAmlkGAEgASgJEgwKBGNoSWQYAiABKAkS",
+            "GwoIY2hhblR5cGUYAyABKA4yCS5wYi5FQ2hhbhILCgNtc2cYBCABKAwSEQoJ",
+            "cHVibGlzaGVyGAUgASgJEhcKD3B1Ymxpc2hlckF2YXRhchgGIAEoCRITCgtw",
+            "dWJsaXNoZXJJZBgHIAEoCTpA+ONJAYLkSQsKCQoHY2hhbl9pZILkSQ0KCwoJ",
+            "cGxheWVyX2lkguRJGAoJCgdjaGFuX2lkCgsKCXBsYXllcl9pZCpUCgVFQ2hh",
+            "bhIKCgZDaFRlYW0QABILCgdDaEdyb3VwEAESCgoGQ2hSb29tEAISCwoHQ2hT",
+            "Y2VuZRADEgsKB0NoV29ybGQQBBIMCghDaFN5c3RlbRAFQhRaAy9wYqoCAlBi",
+            "yt1JBhIEY2hhdGIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Et.VerseReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Kiwi.KiwiReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Pb.EChan), }, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Pb.Chan), global::Pb.Chan.Parser, new[]{ "Id", "ChanType", "Members" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Pb.Msg), global::Pb.Msg.Parser, new[]{ "Id", "ChId", "ChanType", "Msg_", "Publisher", "PublisherAvatar", "PublisherId" }, null, null, null, null)

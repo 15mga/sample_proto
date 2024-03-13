@@ -24,19 +24,19 @@ namespace Pb {
     static UserCReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChNjbGllbnQvdXNlcl9jLnByb3RvEgJwYhoaMTVtLmdhbWVzL3Rvb2wvdmVy",
-            "c2UucHJvdG8iRAoJU2lnblVwUmVxEhAKAmlkGAEgASgJQgSA6kkBEhYKCHBh",
-            "c3N3b3JkGAIgASgJQgSA6kkBOg3q40kFZ3Vlc3Tg40kAIn0KCVNpZ25VcFJl",
-            "cxINCgV0b2tlbhgBIAEoCTph4ONJAfLjSRoIARIIaWRfd3JvbmcaDOi0puWP",
-            "t+mUmeivr/LjSRoIAhIIcHdfd3JvbmcaDOWvhueggemUmeivr/LjSR0IAxII",
-            "aWRfZXhpc3QaD+i0puWPt+W3suWtmOWcqCJECglTaWduSW5SZXESEAoCaWQY",
-            "ASABKAlCBIDqSQESFgoIcGFzc3dvcmQYAiABKAlCBIDqSQE6DerjSQVndWVz",
-            "dODjSQIiUwoJU2lnbkluUmVzEg0KBXRva2VuGAEgASgJOjfg40kD8uNJLwgB",
-            "EhR3cm9uZ19pZF9vcl9wYXNzd29yZBoV6LSm5Y+35oiW5a+G56CB6ZSZ6K+v",
-            "IhwKClNpZ25PdXRSZXE6DuDjSQTq40kGcGxheWVyIhIKClNpZ25PdXRSZXM6",
-            "BODjSQVCFFoDL3BiqgICUGLK3UkGEgR1c2VyYgZwcm90bzM="));
+            "ChNjbGllbnQvdXNlcl9jLnByb3RvEgJwYholZ2l0aHViLmNvbS8xNW1nYS9r",
+            "aXdpX3Rvb2wva2l3aS5wcm90byI4CglTaWduVXBSZXESCgoCaWQYASABKAkS",
+            "EAoIcGFzc3dvcmQYAiABKAk6DerjSQVndWVzdODjSQAifQoJU2lnblVwUmVz",
+            "Eg0KBXRva2VuGAEgASgJOmHg40kB8uNJGggBEghpZF93cm9uZxoM6LSm5Y+3",
+            "6ZSZ6K+v8uNJGggCEghwd193cm9uZxoM5a+G56CB6ZSZ6K+v8uNJHQgDEghp",
+            "ZF9leGlzdBoP6LSm5Y+35bey5a2Y5ZyoIjgKCVNpZ25JblJlcRIKCgJpZBgB",
+            "IAEoCRIQCghwYXNzd29yZBgCIAEoCToN6uNJBWd1ZXN04ONJAiJTCglTaWdu",
+            "SW5SZXMSDQoFdG9rZW4YASABKAk6N+DjSQPy40kvCAESFHdyb25nX2lkX29y",
+            "X3Bhc3N3b3JkGhXotKblj7fmiJblr4bnoIHplJnor68iHAoKU2lnbk91dFJl",
+            "cToO4ONJBOrjSQZwbGF5ZXIiEgoKU2lnbk91dFJlczoE4ONJBUIUWgMvcGKq",
+            "AgJQYsrdSQYSBHVzZXJiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Et.VerseReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Kiwi.KiwiReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Pb.SignUpReq), global::Pb.SignUpReq.Parser, new[]{ "Id", "Password" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Pb.SignUpRes), global::Pb.SignUpRes.Parser, new[]{ "Token" }, null, null, null, null),

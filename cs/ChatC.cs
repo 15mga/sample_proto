@@ -24,20 +24,20 @@ namespace Pb {
     static ChatCReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChNjbGllbnQvY2hhdF9jLnByb3RvEgJwYhoaMTVtLmdhbWVzL3Rvb2wvdmVy",
-            "c2UucHJvdG8aEG1vZGVsL2NoYXQucHJvdG8iQQoJTmV3TXNnUmVxEg4KBmNo",
-            "YW5JZBgBIAEoCRILCgNtc2cYAiABKAw6F+DjSQDq40kGcGxheWVy6uNJBWFk",
-            "bWluIhEKCU5ld01zZ1JlczoE4ONJASKTAQoGTXNnTnRjEg4KBmNoYW5JZBgB",
-            "IAEoCRIbCghjaGFuVHlwZRgCIAEoDjIJLnBiLkVDaGFuEgsKA21zZxgDIAEo",
-            "DBIRCglwdWJsaXNoZXIYBCABKAkSFwoPcHVibGlzaGVyQXZhdGFyGAUgASgJ",
-            "EhMKC3B1Ymxpc2hlcklkGAYgASgJOg7g40kC6uNJBnBsYXllckIUWgMvcGKq",
-            "AgJQYsrdSQYSBGNoYXRiBnByb3RvMw=="));
+            "ChNjbGllbnQvY2hhdF9jLnByb3RvEgJwYholZ2l0aHViLmNvbS8xNW1nYS9r",
+            "aXdpX3Rvb2wva2l3aS5wcm90bxoQbW9kZWwvY2hhdC5wcm90byJBCglOZXdN",
+            "c2dSZXESDgoGY2hhbklkGAEgASgJEgsKA21zZxgCIAEoDDoX4ONJAOrjSQZw",
+            "bGF5ZXLq40kFYWRtaW4iEQoJTmV3TXNnUmVzOgTg40kBIpMBCgZNc2dQdXMS",
+            "DgoGY2hhbklkGAEgASgJEhsKCGNoYW5UeXBlGAIgASgOMgkucGIuRUNoYW4S",
+            "CwoDbXNnGAMgASgMEhEKCXB1Ymxpc2hlchgEIAEoCRIXCg9wdWJsaXNoZXJB",
+            "dmF0YXIYBSABKAkSEwoLcHVibGlzaGVySWQYBiABKAk6DuDjSQLq40kGcGxh",
+            "eWVyQhRaAy9wYqoCAlBiyt1JBhIEY2hhdGIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Et.VerseReflection.Descriptor, global::Pb.ChatReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Kiwi.KiwiReflection.Descriptor, global::Pb.ChatReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Pb.NewMsgReq), global::Pb.NewMsgReq.Parser, new[]{ "ChanId", "Msg" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Pb.NewMsgRes), global::Pb.NewMsgRes.Parser, null, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Pb.MsgNtc), global::Pb.MsgNtc.Parser, new[]{ "ChanId", "ChanType", "Msg", "Publisher", "PublisherAvatar", "PublisherId" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Pb.MsgPus), global::Pb.MsgPus.Parser, new[]{ "ChanId", "ChanType", "Msg", "Publisher", "PublisherAvatar", "PublisherId" }, null, null, null, null)
           }));
     }
     #endregion
@@ -422,16 +422,16 @@ namespace Pb {
 
   }
 
-  public sealed partial class MsgNtc : pb::IMessage<MsgNtc>
+  public sealed partial class MsgPus : pb::IMessage<MsgPus>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
   #endif
   {
-    private static readonly pb::MessageParser<MsgNtc> _parser = new pb::MessageParser<MsgNtc>(() => new MsgNtc());
+    private static readonly pb::MessageParser<MsgPus> _parser = new pb::MessageParser<MsgPus>(() => new MsgPus());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pb::MessageParser<MsgNtc> Parser { get { return _parser; } }
+    public static pb::MessageParser<MsgPus> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -447,7 +447,7 @@ namespace Pb {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public MsgNtc() {
+    public MsgPus() {
       OnConstruction();
     }
 
@@ -455,7 +455,7 @@ namespace Pb {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public MsgNtc(MsgNtc other) : this() {
+    public MsgPus(MsgPus other) : this() {
       chanId_ = other.chanId_;
       chanType_ = other.chanType_;
       msg_ = other.msg_;
@@ -467,8 +467,8 @@ namespace Pb {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public MsgNtc Clone() {
-      return new MsgNtc(this);
+    public MsgPus Clone() {
+      return new MsgPus(this);
     }
 
     /// <summary>Field number for the "chanId" field.</summary>
@@ -555,12 +555,12 @@ namespace Pb {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
-      return Equals(other as MsgNtc);
+      return Equals(other as MsgPus);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool Equals(MsgNtc other) {
+    public bool Equals(MsgPus other) {
       if (ReferenceEquals(other, null)) {
         return false;
       }
@@ -698,7 +698,7 @@ namespace Pb {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(MsgNtc other) {
+    public void MergeFrom(MsgPus other) {
       if (other == null) {
         return;
       }

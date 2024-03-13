@@ -24,22 +24,22 @@ namespace Pb {
     static PlayerReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChJtb2RlbC9wbGF5ZXIucHJvdG8SAnBiGhoxNW0uZ2FtZXMvdG9vbC92ZXJz",
-            "ZS5wcm90byLCAgoGUGxheWVyEgoKAmlkGAEgASgJEg4KBnVzZXJJZBgCIAEo",
-            "CRIMCgRuaWNrGAMgASgJEgwKBGhlcm8YBCABKAUSDgoGYXZhdGFyGAUgASgJ",
-            "Eg4KBnRlYW1JZBgGIAEoCRIOCgZnZW5kZXIYByABKAUSIAoGc3RhdHVzGAgg",
-            "ASgOMhAucGIuUGxheWVyU3RhdHVzEhIKCmxhc3RTaWduSW4YCSABKAMSEAoI",
-            "bGFzdEFkZHIYCiABKAkSFAoMbGFzdEdhdGVOb2RlGAsgASgQOnL440kBguRJ",
-            "DAoICgRuaWNrEAMQAYLkSQgKBgoEaGVyb4LkSQoKCAoGc3RhdHVzguRJEAoO",
-            "CgxsYXN0X3NpZ25faW6C5EkNCgsKCWxhc3RfYWRkcoLkSQsKCQoHdGVhbV9p",
-            "ZILkSQwKCgoIc2NlbmVfaWQifQoJUmVjb25uZWN0EgoKAmlkGAEgASgJEg0K",
-            "BXRva2VuGAIgASgJEhEKCXRpbWVzdGFtcBgDIAEoCRIMCgRoZWFkGAQgASgM",
-            "Eg0KBWNhY2hlGAUgASgMOiX440kBguRJCQoHCgV0b2tlboLkSRAKCwoJdGlt",
-            "ZXN0YW1wIKwCKjcKDFBsYXllclN0YXR1cxILCgdPZmZsaW5lEAASCgoGT25s",
-            "aW5lEAESDgoKRGlzY29ubmVjdBACQiNaAy9wYqoCAlBiyt1JFQgEEgZwbGF5",
-            "ZXIaCQgBEAEaA3JpZGIGcHJvdG8z"));
+            "ChJtb2RlbC9wbGF5ZXIucHJvdG8SAnBiGiVnaXRodWIuY29tLzE1bWdhL2tp",
+            "d2lfdG9vbC9raXdpLnByb3RvIsICCgZQbGF5ZXISCgoCaWQYASABKAkSDgoG",
+            "dXNlcklkGAIgASgJEgwKBG5pY2sYAyABKAkSDAoEaGVybxgEIAEoBRIOCgZh",
+            "dmF0YXIYBSABKAkSDgoGdGVhbUlkGAYgASgJEg4KBmdlbmRlchgHIAEoBRIg",
+            "CgZzdGF0dXMYCCABKA4yEC5wYi5QbGF5ZXJTdGF0dXMSEgoKbGFzdFNpZ25J",
+            "bhgJIAEoAxIQCghsYXN0QWRkchgKIAEoCRIUCgxsYXN0R2F0ZU5vZGUYCyAB",
+            "KBA6cvjjSQGC5EkMCggKBG5pY2sQAxABguRJCAoGCgRoZXJvguRJCgoICgZz",
+            "dGF0dXOC5EkQCg4KDGxhc3Rfc2lnbl9pboLkSQ0KCwoJbGFzdF9hZGRyguRJ",
+            "CwoJCgd0ZWFtX2lkguRJDAoKCghzY2VuZV9pZCJ9CglSZWNvbm5lY3QSCgoC",
+            "aWQYASABKAkSDQoFdG9rZW4YAiABKAkSEQoJdGltZXN0YW1wGAMgASgJEgwK",
+            "BGhlYWQYBCABKAwSDQoFY2FjaGUYBSABKAw6JfjjSQGC5EkJCgcKBXRva2Vu",
+            "guRJEAoLCgl0aW1lc3RhbXAgrAIqNwoMUGxheWVyU3RhdHVzEgsKB09mZmxp",
+            "bmUQABIKCgZPbmxpbmUQARIOCgpEaXNjb25uZWN0EAJCFloDL3BiqgICUGLK",
+            "3UkIEgZwbGF5ZXJiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Et.VerseReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Kiwi.KiwiReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Pb.PlayerStatus), }, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Pb.Player), global::Pb.Player.Parser, new[]{ "Id", "UserId", "Nick", "Hero", "Avatar", "TeamId", "Gender", "Status", "LastSignIn", "LastAddr", "LastGateNode" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Pb.Reconnect), global::Pb.Reconnect.Parser, new[]{ "Id", "Token", "Timestamp", "Head", "Cache" }, null, null, null, null)
