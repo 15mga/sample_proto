@@ -12,10 +12,8 @@ option (kiwi.svc) = {
 
 enum RoomStatus {
   Nil = 0;
-  Lobby = 1;
-  Loading = 2;
-  InProgress = 3;
-  InSettlement = 4;
+  InLobby = 1;
+  InScene = 2;
 }
 
 message Room {
