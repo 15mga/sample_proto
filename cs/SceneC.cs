@@ -39,17 +39,17 @@ namespace Pb {
             "bmVCZWhhdmlvdXJSZXM6kAHg40kF8uNJIQgBEglub3RfZW50cnkaEuayoeac",
             "iei/m+WFpeWcuuaZr/LjSSMIAhIIbm9fc2tpbGwaFeS4jeiDveS9v+eUqOiv",
             "peaKgOiDvfLjSRQIAxIFbm9fY2QaCeayoeWGt+WNtPLjSSQIBBIJbm9fdGFy",
-            "Z2V0GhXkuI3og73pgInmi6nor6Xnm67moIciqAEKDVNjZW5lRXZlbnRQdXMS",
+            "Z2V0GhXkuI3og73pgInmi6nor6Xnm67moIcipwEKDVNjZW5lRXZlbnRQdXMS",
             "IQoHdmlzaWJsZRgBIAMoCzIQLnBiLlNjZW5lUGF3bkV2dBIRCglpbnZpc2li",
-            "bGUYAiADKAkSJwoJdHJhbnNmb3JtGAMgAygLMhQucGIuU2NlbmVNb3ZlbWVu",
-            "dEV2dBIoCgliZWhhdmlvdXIYBCADKAsyFS5wYi5TY2VuZUJlaGF2aW91ckV2",
-            "dDoO4ONJBurjSQZwbGF5ZXIiMQoQU2NlbmVSb2JvdEFkZFJlcRINCgVjb3Vu",
-            "dBgBIAEoBToO4ONJB+rjSQZwbGF5ZXIiUAoQU2NlbmVSb2JvdEFkZFJlcxIR",
-            "CgljdXJyQ291bnQYASABKAU6KeDjSQjy40khCAESCW5vdF9lbnRyeRoS5rKh",
-            "5pyJ6L+b5YWl5Zy65pmvIiQKElNjZW5lUm9ib3RDbGVhclJlcToO4ONJCerj",
-            "SQZwbGF5ZXIiPwoSU2NlbmVSb2JvdENsZWFyUmVzOing40kK8uNJIQgBEglu",
-            "b3RfZW50cnkaEuayoeaciei/m+WFpeWcuuaZr0IVWgMvcGKqAgJQYsrdSQcS",
-            "BXNjZW5lYgZwcm90bzM="));
+            "bGUYAiADKAkSJgoIbW92ZW1lbnQYAyADKAsyFC5wYi5TY2VuZU1vdmVtZW50",
+            "RXZ0EigKCWJlaGF2aW91chgEIAMoCzIVLnBiLlNjZW5lQmVoYXZpb3VyRXZ0",
+            "Og7g40kG6uNJBnBsYXllciIxChBTY2VuZVJvYm90QWRkUmVxEg0KBWNvdW50",
+            "GAEgASgFOg7g40kH6uNJBnBsYXllciJQChBTY2VuZVJvYm90QWRkUmVzEhEK",
+            "CWN1cnJDb3VudBgBIAEoBTop4ONJCPLjSSEIARIJbm90X2VudHJ5GhLmsqHm",
+            "nInov5vlhaXlnLrmma8iJAoSU2NlbmVSb2JvdENsZWFyUmVxOg7g40kJ6uNJ",
+            "BnBsYXllciI/ChJTY2VuZVJvYm90Q2xlYXJSZXM6KeDjSQry40khCAESCW5v",
+            "dF9lbnRyeRoS5rKh5pyJ6L+b5YWl5Zy65pmvQhVaAy9wYqoCAlBiyt1JBxIF",
+            "c2NlbmViBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Kiwi.KiwiReflection.Descriptor, global::Pb.SceneReflection.Descriptor, global::Pb.VectorReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -59,7 +59,7 @@ namespace Pb {
             new pbr::GeneratedClrTypeInfo(typeof(global::Pb.SceneMovementRes), global::Pb.SceneMovementRes.Parser, null, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Pb.SceneBehaviourReq), global::Pb.SceneBehaviourReq.Parser, new[]{ "Behaviour" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Pb.SceneBehaviourRes), global::Pb.SceneBehaviourRes.Parser, null, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Pb.SceneEventPus), global::Pb.SceneEventPus.Parser, new[]{ "Visible", "Invisible", "Transform", "Behaviour" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Pb.SceneEventPus), global::Pb.SceneEventPus.Parser, new[]{ "Visible", "Invisible", "Movement", "Behaviour" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Pb.SceneRobotAddReq), global::Pb.SceneRobotAddReq.Parser, new[]{ "Count" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Pb.SceneRobotAddRes), global::Pb.SceneRobotAddRes.Parser, new[]{ "CurrCount" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Pb.SceneRobotClearReq), global::Pb.SceneRobotClearReq.Parser, null, null, null, null, null),
@@ -1239,7 +1239,7 @@ namespace Pb {
     public SceneEventPus(SceneEventPus other) : this() {
       visible_ = other.visible_.Clone();
       invisible_ = other.invisible_.Clone();
-      transform_ = other.transform_.Clone();
+      movement_ = other.movement_.Clone();
       behaviour_ = other.behaviour_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -1272,15 +1272,15 @@ namespace Pb {
       get { return invisible_; }
     }
 
-    /// <summary>Field number for the "transform" field.</summary>
-    public const int TransformFieldNumber = 3;
-    private static readonly pb::FieldCodec<global::Pb.SceneMovementEvt> _repeated_transform_codec
+    /// <summary>Field number for the "movement" field.</summary>
+    public const int MovementFieldNumber = 3;
+    private static readonly pb::FieldCodec<global::Pb.SceneMovementEvt> _repeated_movement_codec
         = pb::FieldCodec.ForMessage(26, global::Pb.SceneMovementEvt.Parser);
-    private readonly pbc::RepeatedField<global::Pb.SceneMovementEvt> transform_ = new pbc::RepeatedField<global::Pb.SceneMovementEvt>();
+    private readonly pbc::RepeatedField<global::Pb.SceneMovementEvt> movement_ = new pbc::RepeatedField<global::Pb.SceneMovementEvt>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::Pb.SceneMovementEvt> Transform {
-      get { return transform_; }
+    public pbc::RepeatedField<global::Pb.SceneMovementEvt> Movement {
+      get { return movement_; }
     }
 
     /// <summary>Field number for the "behaviour" field.</summary>
@@ -1311,7 +1311,7 @@ namespace Pb {
       }
       if(!visible_.Equals(other.visible_)) return false;
       if(!invisible_.Equals(other.invisible_)) return false;
-      if(!transform_.Equals(other.transform_)) return false;
+      if(!movement_.Equals(other.movement_)) return false;
       if(!behaviour_.Equals(other.behaviour_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -1322,7 +1322,7 @@ namespace Pb {
       int hash = 1;
       hash ^= visible_.GetHashCode();
       hash ^= invisible_.GetHashCode();
-      hash ^= transform_.GetHashCode();
+      hash ^= movement_.GetHashCode();
       hash ^= behaviour_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -1344,7 +1344,7 @@ namespace Pb {
     #else
       visible_.WriteTo(output, _repeated_visible_codec);
       invisible_.WriteTo(output, _repeated_invisible_codec);
-      transform_.WriteTo(output, _repeated_transform_codec);
+      movement_.WriteTo(output, _repeated_movement_codec);
       behaviour_.WriteTo(output, _repeated_behaviour_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -1358,7 +1358,7 @@ namespace Pb {
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       visible_.WriteTo(ref output, _repeated_visible_codec);
       invisible_.WriteTo(ref output, _repeated_invisible_codec);
-      transform_.WriteTo(ref output, _repeated_transform_codec);
+      movement_.WriteTo(ref output, _repeated_movement_codec);
       behaviour_.WriteTo(ref output, _repeated_behaviour_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -1372,7 +1372,7 @@ namespace Pb {
       int size = 0;
       size += visible_.CalculateSize(_repeated_visible_codec);
       size += invisible_.CalculateSize(_repeated_invisible_codec);
-      size += transform_.CalculateSize(_repeated_transform_codec);
+      size += movement_.CalculateSize(_repeated_movement_codec);
       size += behaviour_.CalculateSize(_repeated_behaviour_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1388,7 +1388,7 @@ namespace Pb {
       }
       visible_.Add(other.visible_);
       invisible_.Add(other.invisible_);
-      transform_.Add(other.transform_);
+      movement_.Add(other.movement_);
       behaviour_.Add(other.behaviour_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1414,7 +1414,7 @@ namespace Pb {
             break;
           }
           case 26: {
-            transform_.AddEntriesFrom(input, _repeated_transform_codec);
+            movement_.AddEntriesFrom(input, _repeated_movement_codec);
             break;
           }
           case 34: {
@@ -1445,7 +1445,7 @@ namespace Pb {
             break;
           }
           case 26: {
-            transform_.AddEntriesFrom(ref input, _repeated_transform_codec);
+            movement_.AddEntriesFrom(ref input, _repeated_movement_codec);
             break;
           }
           case 34: {

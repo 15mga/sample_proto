@@ -55,7 +55,7 @@ message SceneEventPus {
   option (kiwi.role) = "player";
   repeated ScenePawnEvt visible = 1;
   repeated string invisible = 2;
-  repeated SceneMovementEvt transform = 3;
+  repeated SceneMovementEvt movement = 3;
   repeated SceneBehaviourEvt behaviour = 4;
 }
 
