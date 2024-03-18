@@ -36,9 +36,9 @@ namespace Pb {
             "SQwKCAoEbmFtZRADEAGC5Ek1CgYKBG5hbWUKBgoEbW9kZQoOCgxzY2VuZV90",
             "cGxfaWQKCQoHcHJpdmF0ZQoICgZzdGF0dXMiTgoKUm9vbVBsYXllchINCgVy",
             "ZWFkeRgBIAEoCBISCgpkaXNjb25uZWN0GAIgASgIEg8KB2VudGVyVHMYAyAB",
-            "KAMSDAoEc2VhdBgEIAEoBSpPCgpSb29tU3RhdHVzEgcKA05pbBAAEgkKBUxv",
-            "YmJ5EAESCwoHTG9hZGluZxACEg4KCkluUHJvZ3Jlc3MQAxIQCgxJblNldHRs",
-            "ZW1lbnQQBEIUWgMvcGKqAgJQYsrdSQYSBHJvb21iBnByb3RvMw=="));
+            "KAMSDAoEc2VhdBgEIAEoBSovCgpSb29tU3RhdHVzEgcKA05pbBAAEgsKB0lu",
+            "TG9iYnkQARILCgdJblNjZW5lEAJCFFoDL3BiqgICUGLK3UkGEgRyb29tYgZw",
+            "cm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Kiwi.KiwiReflection.Descriptor, global::Pb.SceneReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Pb.RoomStatus), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -52,10 +52,8 @@ namespace Pb {
   #region Enums
   public enum RoomStatus {
     [pbr::OriginalName("Nil")] Nil = 0,
-    [pbr::OriginalName("Lobby")] Lobby = 1,
-    [pbr::OriginalName("Loading")] Loading = 2,
-    [pbr::OriginalName("InProgress")] InProgress = 3,
-    [pbr::OriginalName("InSettlement")] InSettlement = 4,
+    [pbr::OriginalName("InLobby")] InLobby = 1,
+    [pbr::OriginalName("InScene")] InScene = 2,
   }
 
   #endregion

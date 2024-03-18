@@ -30,32 +30,32 @@ namespace Pb {
             "ZXIinQEKDVNjZW5lRW50cnlSZXMSHQoIcG9zaXRpb24YASABKAsyCy5wYi5W",
             "ZWN0b3IyOm3g40kB8uNJJAgBEg9ub3RfZXhpc3Rfc2NlbmUaD+S4jeWtmOWc",
             "qOWcuuaZr/LjSR0IAhIIbm9fZW50cnkaD+S4jeWFgeiuuOi/m+WFpfLjSRwI",
-            "AxIHZW50cnllZBoP5LiN5YWB6K646L+b5YWlIkcKEFNjZW5lTW92ZW1lbnRS",
-            "ZXESIwoIbW92ZW1lbnQYASABKAsyES5wYi5TY2VuZU1vdmVtZW50Og7g40kC",
-            "6uNJBnBsYXllciI9ChBTY2VuZU1vdmVtZW50UmVzOing40kD8uNJIQgBEglu",
-            "b3RfZW50cnkaEuayoeaciei/m+WFpeWcuuaZryJAChFTY2VuZUJlaGF2aW91",
-            "clJlcRIlCgliZWhhdmlvdXIYASABKAsyEi5wYi5TY2VuZUJlaGF2aW91cjoE",
-            "4ONJBCKmAQoRU2NlbmVCZWhhdmlvdXJSZXM6kAHg40kF8uNJIQgBEglub3Rf",
-            "ZW50cnkaEuayoeaciei/m+WFpeWcuuaZr/LjSSMIAhIIbm9fc2tpbGwaFeS4",
-            "jeiDveS9v+eUqOivpeaKgOiDvfLjSRQIAxIFbm9fY2QaCeayoeWGt+WNtPLj",
-            "SSQIBBIJbm9fdGFyZ2V0GhXkuI3og73pgInmi6nor6Xnm67moIciqQEKDVNj",
-            "ZW5lRXZlbnRQdXMSIQoHdmlzaWJsZRgBIAMoCzIQLnBiLlNjZW5lUGF3bkV2",
-            "dBIRCglpbnZpc2libGUYAiADKAkSKAoJdHJhbnNmb3JtGAMgAygLMhUucGIu",
-            "U2NlbmVUcmFuc2Zvcm1FdnQSKAoJYmVoYXZpb3VyGAQgAygLMhUucGIuU2Nl",
-            "bmVCZWhhdmlvdXJFdnQ6DuDjSQbq40kGcGxheWVyIjEKEFNjZW5lUm9ib3RB",
-            "ZGRSZXESDQoFY291bnQYASABKAU6DuDjSQfq40kGcGxheWVyIn0KEFNjZW5l",
-            "Um9ib3RBZGRSZXMSEQoJY3VyckNvdW50GAEgASgFOlbg40kI8uNJIQgBEglu",
-            "b3RfZW50cnkaEuayoeaciei/m+WFpeWcuuaZr/LjSSkIAhIOdG9vX21hbnlf",
-            "cm9ib3QaFeacuuWZqOS6uuW3sui+vuS4iumZkCIkChJTY2VuZVJvYm90Q2xl",
-            "YXJSZXE6DuDjSQnq40kGcGxheWVyIj8KElNjZW5lUm9ib3RDbGVhclJlczop",
-            "4ONJCvLjSSEIARIJbm90X2VudHJ5GhLmsqHmnInov5vlhaXlnLrmma9CFVoD",
-            "L3BiqgICUGLK3UkHEgVzY2VuZWIGcHJvdG8z"));
+            "AxIHZW50cnllZBoP5LiN5YWB6K646L+b5YWlImgKEFNjZW5lTW92ZW1lbnRS",
+            "ZXESHgoJZGlyZWN0aW9uGAEgASgLMgsucGIuVmVjdG9yMhIRCgltb3ZlU3Bl",
+            "ZWQYAiABKAISEQoJdGltZXN0YW1wGAMgASgQOg7g40kC6uNJBnBsYXllciI9",
+            "ChBTY2VuZU1vdmVtZW50UmVzOing40kD8uNJIQgBEglub3RfZW50cnkaEuay",
+            "oeaciei/m+WFpeWcuuaZryJAChFTY2VuZUJlaGF2aW91clJlcRIlCgliZWhh",
+            "dmlvdXIYASABKAsyEi5wYi5TY2VuZUJlaGF2aW91cjoE4ONJBCKmAQoRU2Nl",
+            "bmVCZWhhdmlvdXJSZXM6kAHg40kF8uNJIQgBEglub3RfZW50cnkaEuayoeac",
+            "iei/m+WFpeWcuuaZr/LjSSMIAhIIbm9fc2tpbGwaFeS4jeiDveS9v+eUqOiv",
+            "peaKgOiDvfLjSRQIAxIFbm9fY2QaCeayoeWGt+WNtPLjSSQIBBIJbm9fdGFy",
+            "Z2V0GhXkuI3og73pgInmi6nor6Xnm67moIciqAEKDVNjZW5lRXZlbnRQdXMS",
+            "IQoHdmlzaWJsZRgBIAMoCzIQLnBiLlNjZW5lUGF3bkV2dBIRCglpbnZpc2li",
+            "bGUYAiADKAkSJwoJdHJhbnNmb3JtGAMgAygLMhQucGIuU2NlbmVNb3ZlbWVu",
+            "dEV2dBIoCgliZWhhdmlvdXIYBCADKAsyFS5wYi5TY2VuZUJlaGF2aW91ckV2",
+            "dDoO4ONJBurjSQZwbGF5ZXIiMQoQU2NlbmVSb2JvdEFkZFJlcRINCgVjb3Vu",
+            "dBgBIAEoBToO4ONJB+rjSQZwbGF5ZXIiUAoQU2NlbmVSb2JvdEFkZFJlcxIR",
+            "CgljdXJyQ291bnQYASABKAU6KeDjSQjy40khCAESCW5vdF9lbnRyeRoS5rKh",
+            "5pyJ6L+b5YWl5Zy65pmvIiQKElNjZW5lUm9ib3RDbGVhclJlcToO4ONJCerj",
+            "SQZwbGF5ZXIiPwoSU2NlbmVSb2JvdENsZWFyUmVzOing40kK8uNJIQgBEglu",
+            "b3RfZW50cnkaEuayoeaciei/m+WFpeWcuuaZr0IVWgMvcGKqAgJQYsrdSQcS",
+            "BXNjZW5lYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Kiwi.KiwiReflection.Descriptor, global::Pb.SceneReflection.Descriptor, global::Pb.VectorReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Pb.SceneEntryReq), global::Pb.SceneEntryReq.Parser, null, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Pb.SceneEntryRes), global::Pb.SceneEntryRes.Parser, new[]{ "Position" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Pb.SceneMovementReq), global::Pb.SceneMovementReq.Parser, new[]{ "Movement" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Pb.SceneMovementReq), global::Pb.SceneMovementReq.Parser, new[]{ "Direction", "MoveSpeed", "Timestamp" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Pb.SceneMovementRes), global::Pb.SceneMovementRes.Parser, null, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Pb.SceneBehaviourReq), global::Pb.SceneBehaviourReq.Parser, new[]{ "Behaviour" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Pb.SceneBehaviourRes), global::Pb.SceneBehaviourRes.Parser, null, null, null, null, null),
@@ -454,7 +454,9 @@ namespace Pb {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SceneMovementReq(SceneMovementReq other) : this() {
-      movement_ = other.movement_ != null ? other.movement_.Clone() : null;
+      direction_ = other.direction_ != null ? other.direction_.Clone() : null;
+      moveSpeed_ = other.moveSpeed_;
+      timestamp_ = other.timestamp_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -464,15 +466,48 @@ namespace Pb {
       return new SceneMovementReq(this);
     }
 
-    /// <summary>Field number for the "movement" field.</summary>
-    public const int MovementFieldNumber = 1;
-    private global::Pb.SceneMovement movement_;
+    /// <summary>Field number for the "direction" field.</summary>
+    public const int DirectionFieldNumber = 1;
+    private global::Pb.Vector2 direction_;
+    /// <summary>
+    ///方向模
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Pb.SceneMovement Movement {
-      get { return movement_; }
+    public global::Pb.Vector2 Direction {
+      get { return direction_; }
       set {
-        movement_ = value;
+        direction_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "moveSpeed" field.</summary>
+    public const int MoveSpeedFieldNumber = 2;
+    private float moveSpeed_;
+    /// <summary>
+    ///移动速度
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public float MoveSpeed {
+      get { return moveSpeed_; }
+      set {
+        moveSpeed_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "timestamp" field.</summary>
+    public const int TimestampFieldNumber = 3;
+    private long timestamp_;
+    /// <summary>
+    ///移动的时间戳,unix millSec
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public long Timestamp {
+      get { return timestamp_; }
+      set {
+        timestamp_ = value;
       }
     }
 
@@ -491,7 +526,9 @@ namespace Pb {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (!object.Equals(Movement, other.Movement)) return false;
+      if (!object.Equals(Direction, other.Direction)) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(MoveSpeed, other.MoveSpeed)) return false;
+      if (Timestamp != other.Timestamp) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -499,7 +536,9 @@ namespace Pb {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (movement_ != null) hash ^= Movement.GetHashCode();
+      if (direction_ != null) hash ^= Direction.GetHashCode();
+      if (MoveSpeed != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(MoveSpeed);
+      if (Timestamp != 0L) hash ^= Timestamp.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -518,9 +557,17 @@ namespace Pb {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (movement_ != null) {
+      if (direction_ != null) {
         output.WriteRawTag(10);
-        output.WriteMessage(Movement);
+        output.WriteMessage(Direction);
+      }
+      if (MoveSpeed != 0F) {
+        output.WriteRawTag(21);
+        output.WriteFloat(MoveSpeed);
+      }
+      if (Timestamp != 0L) {
+        output.WriteRawTag(25);
+        output.WriteSFixed64(Timestamp);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -532,9 +579,17 @@ namespace Pb {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (movement_ != null) {
+      if (direction_ != null) {
         output.WriteRawTag(10);
-        output.WriteMessage(Movement);
+        output.WriteMessage(Direction);
+      }
+      if (MoveSpeed != 0F) {
+        output.WriteRawTag(21);
+        output.WriteFloat(MoveSpeed);
+      }
+      if (Timestamp != 0L) {
+        output.WriteRawTag(25);
+        output.WriteSFixed64(Timestamp);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -546,8 +601,14 @@ namespace Pb {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (movement_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Movement);
+      if (direction_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Direction);
+      }
+      if (MoveSpeed != 0F) {
+        size += 1 + 4;
+      }
+      if (Timestamp != 0L) {
+        size += 1 + 8;
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -561,11 +622,17 @@ namespace Pb {
       if (other == null) {
         return;
       }
-      if (other.movement_ != null) {
-        if (movement_ == null) {
-          Movement = new global::Pb.SceneMovement();
+      if (other.direction_ != null) {
+        if (direction_ == null) {
+          Direction = new global::Pb.Vector2();
         }
-        Movement.MergeFrom(other.Movement);
+        Direction.MergeFrom(other.Direction);
+      }
+      if (other.MoveSpeed != 0F) {
+        MoveSpeed = other.MoveSpeed;
+      }
+      if (other.Timestamp != 0L) {
+        Timestamp = other.Timestamp;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -583,10 +650,18 @@ namespace Pb {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 10: {
-            if (movement_ == null) {
-              Movement = new global::Pb.SceneMovement();
+            if (direction_ == null) {
+              Direction = new global::Pb.Vector2();
             }
-            input.ReadMessage(Movement);
+            input.ReadMessage(Direction);
+            break;
+          }
+          case 21: {
+            MoveSpeed = input.ReadFloat();
+            break;
+          }
+          case 25: {
+            Timestamp = input.ReadSFixed64();
             break;
           }
         }
@@ -605,10 +680,18 @@ namespace Pb {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 10: {
-            if (movement_ == null) {
-              Movement = new global::Pb.SceneMovement();
+            if (direction_ == null) {
+              Direction = new global::Pb.Vector2();
             }
-            input.ReadMessage(Movement);
+            input.ReadMessage(Direction);
+            break;
+          }
+          case 21: {
+            MoveSpeed = input.ReadFloat();
+            break;
+          }
+          case 25: {
+            Timestamp = input.ReadSFixed64();
             break;
           }
         }
@@ -1191,12 +1274,12 @@ namespace Pb {
 
     /// <summary>Field number for the "transform" field.</summary>
     public const int TransformFieldNumber = 3;
-    private static readonly pb::FieldCodec<global::Pb.SceneTransformEvt> _repeated_transform_codec
-        = pb::FieldCodec.ForMessage(26, global::Pb.SceneTransformEvt.Parser);
-    private readonly pbc::RepeatedField<global::Pb.SceneTransformEvt> transform_ = new pbc::RepeatedField<global::Pb.SceneTransformEvt>();
+    private static readonly pb::FieldCodec<global::Pb.SceneMovementEvt> _repeated_transform_codec
+        = pb::FieldCodec.ForMessage(26, global::Pb.SceneMovementEvt.Parser);
+    private readonly pbc::RepeatedField<global::Pb.SceneMovementEvt> transform_ = new pbc::RepeatedField<global::Pb.SceneMovementEvt>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::Pb.SceneTransformEvt> Transform {
+    public pbc::RepeatedField<global::Pb.SceneMovementEvt> Transform {
       get { return transform_; }
     }
 

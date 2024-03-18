@@ -27,7 +27,9 @@ message SceneEntryRes {
 message SceneMovementReq {
   option (kiwi.code) = 2;
   option (kiwi.role) = "player";
-  SceneMovement movement = 1;
+  Vector2 direction = 1; //方向模
+  float moveSpeed = 2; //移动速度
+  sfixed64 timestamp = 3; //移动的时间戳,unix millSec
 }
 
 message SceneMovementRes {
@@ -53,7 +55,7 @@ message SceneEventPus {
   option (kiwi.role) = "player";
   repeated ScenePawnEvt visible = 1;
   repeated string invisible = 2;
-  repeated SceneTransformEvt transform = 3;
+  repeated SceneMovementEvt transform = 3;
   repeated SceneBehaviourEvt behaviour = 4;
 }
 
