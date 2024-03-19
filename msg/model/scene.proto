@@ -32,21 +32,6 @@ message SceneTemplate {
   int32 height = 4;
 }
 
-message ScenePawn {
-  ScenePawnEvt pawn = 1;
-  string playerGateAddr = 3;
-  int64 playerGateNodeId = 4;
-}
-
-message ScenePawnEvt {
-  string pawnId = 1;
-  Vector2 position = 2;
-  oneof pawnType {
-    ScenePlayer player = 3;
-    SceneMonster monster = 4;
-  }
-}
-
 message SceneAdmittedPlayer {
   string id = 1;
   bool entered = 2;
@@ -64,44 +49,39 @@ message SceneMonster {
   string tplId = 1;
 }
 
-message SceneMovement {
-  Vector2 position = 1; //方向模
-  sfixed64 duration = 3; //移动的时间,单位毫秒
-}
-
-message SceneBehaviour {
-  sfixed64 timestamp = 1; //行为的时间戳,unix millSec
-  oneof behaviourType {
-    BehaviourIdle idle = 2;
-    BehaviourRun run = 3;
-    BehaviourTargetSkill pawnSkill = 4;
-    BehaviourAreaSkill areaSkill = 5;
+message SceneEvent {
+  string id = 1;
+  oneof event {
+    SceneInvisible invisible = 2;
+    SceneVisible visible = 3;
+    SceneMovement movement = 4;
+    SceneSkill skill = 5;
   }
 }
 
-message SceneMovementEvt {
-  string pawnId = 1;
-  repeated SceneMovement movement = 2;
+message SceneInvisible {
+  sfixed64 timestamp = 1; //时间戳,unix millSec
 }
 
-message SceneBehaviourEvt {
-  string pawnId = 1;
-  repeated SceneBehaviour behaviour = 2;
-}
-
-message BehaviourIdle {
-}
-
-message BehaviourRun {
-}
-
-
-message BehaviourTargetSkill {
-  int32 skillId = 1;
-  string targetId = 2;
-}
-
-message BehaviourAreaSkill {
-  int32 skillId = 1;
+message SceneVisible {
+  sfixed64 timestamp = 1; //时间戳,unix millSec
   Vector2 position = 2;
+  int64 gateNodeId = 3;
+  string gateAddr = 4;
+  oneof pawnType {
+    ScenePlayer player = 5;
+    SceneMonster monster = 6;
+  }
+}
+
+message SceneMovement {
+  sfixed64 timestamp = 1; //时间戳,unix millSec
+  Vector2 position = 2; //位置
+}
+
+message SceneSkill {
+  sfixed64 timestamp = 1; //时间戳,unix millSec
+  int32 skillId = 2;
+  repeated string targetId = 3;
+  Vector2 position = 4;
 }

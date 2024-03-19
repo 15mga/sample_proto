@@ -24,8 +24,36 @@ message SceneEntryRes {
   Vector2 position = 1;
 }
 
-message SceneMovementReq {
+message SceneEventPus {
   option (kiwi.code) = 2;
+  option (kiwi.role) = "player";
+  repeated SceneEvent events = 1;
+}
+
+message SceneRobotAddReq {
+  option (kiwi.code) = 3;
+  option (kiwi.role) = "player";
+  int32 count = 1;
+}
+
+message SceneRobotAddRes {
+  option (kiwi.code) = 4;
+  option (kiwi.fail) = {code:1, key:"not_entry", msg:"没有进入场景"};
+  int32 currCount = 1;
+}
+
+message SceneRobotClearReq {
+  option (kiwi.code) = 5;
+  option (kiwi.role) = "player";
+}
+
+message SceneRobotClearRes {
+  option (kiwi.code) = 6;
+  option (kiwi.fail) = {code:1, key:"not_entry", msg:"没有进入场景"};
+}
+
+message SceneMovementReq {
+  option (kiwi.code) = 7;
   option (kiwi.role) = "player";
   Vector2 direction = 1; //方向模
   float moveSpeed = 2; //移动速度
@@ -33,50 +61,19 @@ message SceneMovementReq {
 }
 
 message SceneMovementRes {
-  option (kiwi.code) = 3;
+  option (kiwi.code) = 8;
   option (kiwi.fail) = {code:1, key:"not_entry", msg:"没有进入场景"};
 }
 
-message SceneBehaviourReq {
-  option (kiwi.code) = 4;
-  SceneBehaviour behaviour = 1;
+message SceneSkillReq {
+  option (kiwi.code) = 9;
+  SceneSkill skill = 1;
 }
 
-message SceneBehaviourRes {
-  option (kiwi.code) = 5;
+message SceneSkillRes {
+  option (kiwi.code) = 10;
   option (kiwi.fail) = {code:1, key:"not_entry", msg:"没有进入场景"};
   option (kiwi.fail) = {code:2, key:"no_skill", msg:"不能使用该技能"};
   option (kiwi.fail) = {code:3, key:"no_cd", msg:"没冷却"};
   option (kiwi.fail) = {code:4, key:"no_target", msg:"不能选择该目标"};
-}
-
-message SceneEventPus {
-  option (kiwi.code) = 6;
-  option (kiwi.role) = "player";
-  repeated ScenePawnEvt visible = 1;
-  repeated string invisible = 2;
-  repeated SceneMovementEvt movement = 3;
-  repeated SceneBehaviourEvt behaviour = 4;
-}
-
-message SceneRobotAddReq {
-  option (kiwi.code) = 7;
-  option (kiwi.role) = "player";
-  int32 count = 1;
-}
-
-message SceneRobotAddRes {
-  option (kiwi.code) = 8;
-  option (kiwi.fail) = {code:1, key:"not_entry", msg:"没有进入场景"};
-  int32 currCount = 1;
-}
-
-message SceneRobotClearReq {
-  option (kiwi.code) = 9;
-  option (kiwi.role) = "player";
-}
-
-message SceneRobotClearRes {
-  option (kiwi.code) = 10;
-  option (kiwi.fail) = {code:1, key:"not_entry", msg:"没有进入场景"};
 }
