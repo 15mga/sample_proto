@@ -43,12 +43,12 @@ namespace Pb {
             "KAsyCy5wYi5WZWN0b3IyEhIKCmdhdGVOb2RlSWQYAyABKAMSEAoIZ2F0ZUFk",
             "ZHIYBCABKAkSIQoGcGxheWVyGAUgASgLMg8ucGIuU2NlbmVQbGF5ZXJIABIj",
             "Cgdtb25zdGVyGAYgASgLMhAucGIuU2NlbmVNb25zdGVySABCCgoIcGF3blR5",
-            "cGUiQQoNU2NlbmVNb3ZlbWVudBIRCgl0aW1lc3RhbXAYASABKBASHQoIcG9z",
-            "aXRpb24YAiABKAsyCy5wYi5WZWN0b3IyImEKClNjZW5lU2tpbGwSEQoJdGlt",
-            "ZXN0YW1wGAEgASgQEg8KB3NraWxsSWQYAiABKAUSEAoIdGFyZ2V0SWQYAyAD",
-            "KAkSHQoIcG9zaXRpb24YBCABKAsyCy5wYi5WZWN0b3IyKjAKCkVTY2VuZU1v",
-            "ZGUSBwoDUFZFEAASBwoDUFZQEAESBwoDUFZSEAISBwoDV2FyEANCFVoDL3Bi",
-            "qgICUGLK3UkHEgVzY2VuZWIGcHJvdG8z"));
+            "cGUiUwoNU2NlbmVNb3ZlbWVudBIRCgl0aW1lc3RhbXAYASABKBASHQoIcG9z",
+            "aXRpb24YAiABKAsyCy5wYi5WZWN0b3IyEhAKCGR1cmF0aW9uGAMgASgDImEK",
+            "ClNjZW5lU2tpbGwSEQoJdGltZXN0YW1wGAEgASgQEg8KB3NraWxsSWQYAiAB",
+            "KAUSEAoIdGFyZ2V0SWQYAyADKAkSHQoIcG9zaXRpb24YBCABKAsyCy5wYi5W",
+            "ZWN0b3IyKjAKCkVTY2VuZU1vZGUSBwoDUFZFEAASBwoDUFZQEAESBwoDUFZS",
+            "EAISBwoDV2FyEANCFVoDL3BiqgICUGLK3UkHEgVzY2VuZWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Kiwi.KiwiReflection.Descriptor, global::Pb.VectorReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Pb.ESceneMode), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -60,7 +60,7 @@ namespace Pb {
             new pbr::GeneratedClrTypeInfo(typeof(global::Pb.SceneEvent), global::Pb.SceneEvent.Parser, new[]{ "Id", "Invisible", "Visible", "Movement", "Skill" }, new[]{ "Event" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Pb.SceneInvisible), global::Pb.SceneInvisible.Parser, new[]{ "Timestamp" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Pb.SceneVisible), global::Pb.SceneVisible.Parser, new[]{ "Timestamp", "Position", "GateNodeId", "GateAddr", "Player", "Monster" }, new[]{ "PawnType" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Pb.SceneMovement), global::Pb.SceneMovement.Parser, new[]{ "Timestamp", "Position" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Pb.SceneMovement), global::Pb.SceneMovement.Parser, new[]{ "Timestamp", "Position", "Duration" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Pb.SceneSkill), global::Pb.SceneSkill.Parser, new[]{ "Timestamp", "SkillId", "TargetId", "Position" }, null, null, null, null)
           }));
     }
@@ -2538,6 +2538,7 @@ namespace Pb {
     public SceneMovement(SceneMovement other) : this() {
       timestamp_ = other.timestamp_;
       position_ = other.position_ != null ? other.position_.Clone() : null;
+      duration_ = other.duration_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -2577,6 +2578,18 @@ namespace Pb {
       }
     }
 
+    /// <summary>Field number for the "duration" field.</summary>
+    public const int DurationFieldNumber = 3;
+    private long duration_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public long Duration {
+      get { return duration_; }
+      set {
+        duration_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -2594,6 +2607,7 @@ namespace Pb {
       }
       if (Timestamp != other.Timestamp) return false;
       if (!object.Equals(Position, other.Position)) return false;
+      if (Duration != other.Duration) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -2603,6 +2617,7 @@ namespace Pb {
       int hash = 1;
       if (Timestamp != 0L) hash ^= Timestamp.GetHashCode();
       if (position_ != null) hash ^= Position.GetHashCode();
+      if (Duration != 0L) hash ^= Duration.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -2629,6 +2644,10 @@ namespace Pb {
         output.WriteRawTag(18);
         output.WriteMessage(Position);
       }
+      if (Duration != 0L) {
+        output.WriteRawTag(24);
+        output.WriteInt64(Duration);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -2647,6 +2666,10 @@ namespace Pb {
         output.WriteRawTag(18);
         output.WriteMessage(Position);
       }
+      if (Duration != 0L) {
+        output.WriteRawTag(24);
+        output.WriteInt64(Duration);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -2662,6 +2685,9 @@ namespace Pb {
       }
       if (position_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Position);
+      }
+      if (Duration != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(Duration);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -2683,6 +2709,9 @@ namespace Pb {
           Position = new global::Pb.Vector2();
         }
         Position.MergeFrom(other.Position);
+      }
+      if (other.Duration != 0L) {
+        Duration = other.Duration;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -2710,6 +2739,10 @@ namespace Pb {
             input.ReadMessage(Position);
             break;
           }
+          case 24: {
+            Duration = input.ReadInt64();
+            break;
+          }
         }
       }
     #endif
@@ -2734,6 +2767,10 @@ namespace Pb {
               Position = new global::Pb.Vector2();
             }
             input.ReadMessage(Position);
+            break;
+          }
+          case 24: {
+            Duration = input.ReadInt64();
             break;
           }
         }

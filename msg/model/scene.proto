@@ -77,6 +77,7 @@ message SceneVisible {
 message SceneMovement {
   sfixed64 timestamp = 1; //时间戳,unix millSec
   Vector2 position = 2; //位置
+  int64 duration = 3;
 }
 
 message SceneSkill {
