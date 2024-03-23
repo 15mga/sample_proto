@@ -25,14 +25,14 @@ namespace Pb {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChBtb2RlbC91c2VyLnByb3RvEgJwYholZ2l0aHViLmNvbS8xNW1nYS9raXdp",
-            "X3Rvb2wva2l3aS5wcm90byJWCgRVc2VyEgoKAmlkGAEgASgJEhAKCHBhc3N3",
-            "b3JkGAIgASgJEhAKCHJvbGVNYXNrGAMgASgDEgsKA2JhbhgEIAEoCDoR+ONJ",
-            "AYLkSQkKBQoDYmFuEAFCIFoDL3BiqgICUGLK3UkSCAMSBHVzZXIaCBABGgRh",
-            "ZGRyYgZwcm90bzM="));
+            "X3Rvb2wva2l3aS5wcm90byJnCgRVc2VyEgoKAmlkGAEgASgJEhAKCHBhc3N3",
+            "b3JkGAIgASgJEhAKCHJvbGVNYXNrGAMgASgDEg4KBm1vYmlsZRgEIAEoCRIL",
+            "CgNiYW4YBSABKAg6EvjjSQGC5EkKCggKBm1vYmlsZUIgWgMvcGKqAgJQYsrd",
+            "SRIIAxIEdXNlchoIEAEaBGFkZHJiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Kiwi.KiwiReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Pb.User), global::Pb.User.Parser, new[]{ "Id", "Password", "RoleMask", "Ban" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Pb.User), global::Pb.User.Parser, new[]{ "Id", "Password", "RoleMask", "Mobile", "Ban" }, null, null, null, null)
           }));
     }
     #endregion
@@ -76,6 +76,7 @@ namespace Pb {
       id_ = other.id_;
       password_ = other.password_;
       roleMask_ = other.roleMask_;
+      mobile_ = other.mobile_;
       ban_ = other.ban_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -122,8 +123,20 @@ namespace Pb {
       }
     }
 
+    /// <summary>Field number for the "mobile" field.</summary>
+    public const int MobileFieldNumber = 4;
+    private string mobile_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Mobile {
+      get { return mobile_; }
+      set {
+        mobile_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     /// <summary>Field number for the "ban" field.</summary>
-    public const int BanFieldNumber = 4;
+    public const int BanFieldNumber = 5;
     private bool ban_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -152,6 +165,7 @@ namespace Pb {
       if (Id != other.Id) return false;
       if (Password != other.Password) return false;
       if (RoleMask != other.RoleMask) return false;
+      if (Mobile != other.Mobile) return false;
       if (Ban != other.Ban) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -163,6 +177,7 @@ namespace Pb {
       if (Id.Length != 0) hash ^= Id.GetHashCode();
       if (Password.Length != 0) hash ^= Password.GetHashCode();
       if (RoleMask != 0L) hash ^= RoleMask.GetHashCode();
+      if (Mobile.Length != 0) hash ^= Mobile.GetHashCode();
       if (Ban != false) hash ^= Ban.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -194,8 +209,12 @@ namespace Pb {
         output.WriteRawTag(24);
         output.WriteInt64(RoleMask);
       }
+      if (Mobile.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(Mobile);
+      }
       if (Ban != false) {
-        output.WriteRawTag(32);
+        output.WriteRawTag(40);
         output.WriteBool(Ban);
       }
       if (_unknownFields != null) {
@@ -220,8 +239,12 @@ namespace Pb {
         output.WriteRawTag(24);
         output.WriteInt64(RoleMask);
       }
+      if (Mobile.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(Mobile);
+      }
       if (Ban != false) {
-        output.WriteRawTag(32);
+        output.WriteRawTag(40);
         output.WriteBool(Ban);
       }
       if (_unknownFields != null) {
@@ -242,6 +265,9 @@ namespace Pb {
       }
       if (RoleMask != 0L) {
         size += 1 + pb::CodedOutputStream.ComputeInt64Size(RoleMask);
+      }
+      if (Mobile.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Mobile);
       }
       if (Ban != false) {
         size += 1 + 1;
@@ -266,6 +292,9 @@ namespace Pb {
       }
       if (other.RoleMask != 0L) {
         RoleMask = other.RoleMask;
+      }
+      if (other.Mobile.Length != 0) {
+        Mobile = other.Mobile;
       }
       if (other.Ban != false) {
         Ban = other.Ban;
@@ -297,7 +326,11 @@ namespace Pb {
             RoleMask = input.ReadInt64();
             break;
           }
-          case 32: {
+          case 34: {
+            Mobile = input.ReadString();
+            break;
+          }
+          case 40: {
             Ban = input.ReadBool();
             break;
           }
@@ -328,7 +361,11 @@ namespace Pb {
             RoleMask = input.ReadInt64();
             break;
           }
-          case 32: {
+          case 34: {
+            Mobile = input.ReadString();
+            break;
+          }
+          case 40: {
             Ban = input.ReadBool();
             break;
           }

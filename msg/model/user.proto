@@ -20,12 +20,12 @@ message User {
   string id = 1;
   string password = 2;
   int64 roleMask = 3;
-  bool ban = 4;
+  string mobile = 4;
+  bool ban = 5;
   option (kiwi.idx) = {
-    unique: true,
     fields:[
       {
-        name: "ban",
+        name: "mobile",
       }
     ]
   };
