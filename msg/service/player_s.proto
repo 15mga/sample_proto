@@ -50,3 +50,7 @@ message PlayerOfflineNtc {
   option (kiwi.code) = 105;
   string id = 1;
 }
+
+message PlayerRepeatNtc {
+  option (kiwi.code) = 106;
+}

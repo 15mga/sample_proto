@@ -28,7 +28,7 @@ message PlayerManyReq {
   option (kiwi.role) = "player";
   option (kiwi.role) = "admin";
   repeated string id = 1;
-  repeated string projection = 2; //需要映射的字段
+  repeated string projection = 2;
 }
 
 message PlayerManyRes {
@@ -86,9 +86,4 @@ message PlayerReconnectRes {
   option (kiwi.fail) = {code: 1, key:"not_exist", msg:"不存在token或玩家id"};
   string roomId = 1;
   string sceneId = 2;
-}
-
-//重复登录
-message PlayerRepeatNtc {
-  option (kiwi.code) = 12;
 }
